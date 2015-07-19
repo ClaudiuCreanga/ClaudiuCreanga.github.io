@@ -6646,6 +6646,33 @@ th.hide-for-touch {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000037}}
   .top-bar li {
     padding: 1.5625rem 1.875rem 1.25rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000310}}
+  .top-bar a {
+    text-decoration: none;
+    position: relative;
+    padding: 0 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000314}}
+    .top-bar a:hover {
+      color: #000000; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000317}}
+    .top-bar a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000331}}
+    .top-bar a:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\000031}}
 .footer-social a {
