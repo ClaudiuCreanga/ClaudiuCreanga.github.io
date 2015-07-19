@@ -25,5 +25,17 @@
 	    });
 	  });
 	  
+	  /***** TOP BLOCKS *****/
+	  $(".call-block").on("click", function(){
+		  var element = $(this).parent().attr("class");
+		  $(".blocks").find("div").slideUp();
+		  if($("."+element).is(":hidden")){
+			  $(".blocks").find("."+element).slideDown();
+		  }
+		  else{
+			  $(".blocks").find("."+element).slideUp();
+		  }
+	  })
+	  
   });
 })(jQuery);

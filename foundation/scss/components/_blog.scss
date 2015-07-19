@@ -1,0 +1,17 @@
+.post-list h2{
+	display: inline-block;
+}
+.post-meta{
+	display: inline-block;
+	color: $primary-color;
+}
+.post-list a{
+	background: none;
+	padding: rem-calc(10);
+}
+.popular a, .categories a{
+	background: none;
+}
+.popular, .categories{
+	margin-left: 0;
+}

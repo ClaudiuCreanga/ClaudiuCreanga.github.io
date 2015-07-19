@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="home">
-
+  <p>Currently there are no posts here.</p>
   <ul class="post-list lists cool-bullet">
-    {% for post in site.posts %}
+	{% for post in site.categories.frontend %}
       <li>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>

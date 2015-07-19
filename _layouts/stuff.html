@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+    
+    {% include block.html %}
+
+    <div class="wrapper">
+	    
+      <h1 class="page-heading">Other stuff</h1>
+	    
+      <div class="col-main-1">
+	      
+        {{ content }}
+        
+      </div>
+      
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

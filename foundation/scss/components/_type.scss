@@ -1,0 +1,31 @@
+h1, h2{
+	text-transform: uppercase;
+	font-family: $base-font-family;
+	letter-spacing: rem-calc(4);
+}
+h1{
+	text-align: center;
+}
+p{
+	font-size: rem-calc(13);
+	color: $primary-color;
+	letter-spacing: rem-calc(1);
+	line-height: rem-calc(22);
+}
+.lists{
+	font-size: rem-calc(13);
+	list-style-type: none;
+	color: $primary-color;
+	@extend .cool-bullet;
+	li{
+		margin-right: rem-calc(15);
+		list-style-type: none;
+	}
+	a{
+		text-transform: uppercase;
+		letter-spacing: rem-calc(1);
+		background: $smoke;
+		padding: rem-calc(5);
+	}
+}
+

@@ -1,3 +1,8 @@
+.site-footer{
+	text-align: center;
+	border-top:1px solid $black;
+	padding: ($column-gutter * 2) 0;
+}
 .footer-social a {
     height: 25px;
     line-height: 25px !important;

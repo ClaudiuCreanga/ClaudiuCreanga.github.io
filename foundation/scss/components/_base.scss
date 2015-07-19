@@ -1,3 +1,36 @@
+.wrapper {
+	@include grid-row();
+	padding-bottom: $column-gutter / 2;
+	.col-main {
+		@include grid-column(12);
+		@media #{$small} {
+		  @include grid-column(9);
+		}
+		@media #{$medium} {
+		  @include grid-column(12);
+		}
+		@media #{$large} {
+		  @include grid-column(9);
+		}
+	}
+	.col-right {
+		@include grid-column(12);
+		@media #{$small} {
+		  @include grid-column(3);
+		}
+		@media #{$medium} {
+		  @include grid-column(3);
+		}
+	}
+	.col-main-1{
+		@include grid-column(12);
+	}
+}
+
+.page-heading{
+	padding:($column-gutter * 2) 0;
+}
+
 #back-top {
   position: fixed;
   bottom:20px;

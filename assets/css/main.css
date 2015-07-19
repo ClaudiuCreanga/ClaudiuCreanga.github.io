@@ -5340,11 +5340,11 @@ h1, h2, h3, h4, h5, h6 {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003269}}
 h1 {
-  font-size: 2.125rem; }
+  font-size: 0.625rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003270}}
 h2 {
-  font-size: 1.6875rem; }
+  font-size: 0.375rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003271}}
 h3 {
@@ -5550,11 +5550,11 @@ blockquote p {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003456}}
   h1 {
-    font-size: 2.75rem; }
+    font-size: 1.25rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003457}}
   h2 {
-    font-size: 2.3125rem; }
+    font-size: 1rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003458}}
   h3 {
@@ -6622,39 +6622,162 @@ th.hide-for-touch {
   .show-for-print {
     display: none !important; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_mixins\.scss}line{font-family:\000031}}
-.awesome, .fa {
+.awesome, .cool-bullet li:before, .lists li:before, .fa {
   font-family: "FontAwesome", "ralewayregular", Georgia, Arial; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_mixins\.scss}line{font-family:\000035}}
+.cool-bullet li:before, .lists li:before {
+  content: "\f192";
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-language-override: normal;
+  font-size: inherit;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: auto; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\000031}}
+.wrapper {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%;
+  padding-bottom: 0.9375rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003172}}
+  .wrapper:before, .wrapper:after {
+    content: " ";
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003173}}
+  .wrapper:after {
+    clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\000034}}
+  .wrapper .col-main {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; }
+    @media only screen and (min-width: 40.0625em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\000034}}
+      .wrapper .col-main {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 75%;
+        float: left; } }
+    @media only screen and (min-width: 40.0625em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\000034}}
+      .wrapper .col-main {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 100%;
+        float: left; } }
+    @media only screen and (min-width: 64.0625em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\000034}}
+      .wrapper .col-main {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 75%;
+        float: left; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\0000316}}
+  .wrapper .col-right {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; }
+    @media only screen and (min-width: 40.0625em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\0000316}}
+      .wrapper .col-right {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 25%;
+        float: left; } }
+    @media only screen and (min-width: 40.0625em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\0000316}}
+      .wrapper .col-right {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 25%;
+        float: left; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\0000325}}
+  .wrapper .col-main-1 {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\0000330}}
+.page-heading {
+  padding: 3.75rem 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\0000334}}
 #back-top {
   position: fixed;
   bottom: 20px;
   right: 2%;
   z-index: 100; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\0000339}}
   #back-top a {
     background: url(../images/back-to-top.svg) no-repeat; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_type\.scss}line{font-family:\000031}}
+h1, h2 {
+  text-transform: uppercase;
+  font-family: "ralewaylight", Georgia, Arial;
+  letter-spacing: 0.25rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_type\.scss}line{font-family:\000036}}
+h1 {
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_type\.scss}line{font-family:\000039}}
+p {
+  font-size: 0.8125rem;
+  color: #616265;
+  letter-spacing: 0.0625rem;
+  line-height: 1.375rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_type\.scss}line{font-family:\0000315}}
+.lists {
+  font-size: 0.8125rem;
+  list-style-type: none;
+  color: #616265; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_type\.scss}line{font-family:\0000320}}
+  .lists li {
+    margin-right: 0.9375rem;
+    list-style-type: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_type\.scss}line{font-family:\0000324}}
+  .lists a {
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    background: #EEEEEE;
+    padding: 0.3125rem; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000031}}
 .site-header {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0px 1px 1px #000000;
+  height: 4.6875rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000035}}
 .top-bar {
   letter-spacing: 0.0625rem;
   min-height: 4.6875rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000039}}
   .top-bar .right li {
     padding: 1.5625rem 1.875rem 1.25rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000312}}
   .top-bar .right a {
     text-decoration: none;
     position: relative;
     padding: 0 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000316}}
     .top-bar .right a:hover {
       color: #000000; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000319}}
     .top-bar .right a:before {
       content: "";
       position: absolute;
@@ -6668,18 +6791,82 @@ th.hide-for-touch {
       transform: scaleX(0);
       -webkit-transition: all 0.3s ease-in-out 0s;
       transition: all 0.3s ease-in-out 0s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000333}}
     .top-bar .right a:hover:before {
       visibility: visible;
       -webkit-transform: scaleX(1);
       transform: scaleX(1); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000340}}
   .top-bar .susuwatari {
     background: url(../images/susuwatari.svg) no-repeat !important;
     width: 4.375rem;
     height: 4.375rem; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_top-blocks\.scss}line{font-family:\000032}}
+.blocks > div {
+  display: none;
+  padding: 1.875rem 0 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_top-blocks\.scss}line{font-family:\000036}}
+.blocks p span {
+  text-transform: uppercase;
+  letter-spacing: 0.09375rem;
+  background: #EEEEEE;
+  padding: 0.3125rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_top-blocks\.scss}line{font-family:\0000313}}
+.projects a {
+  text-decoration: underline;
+  color: #000000; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_top-blocks\.scss}line{font-family:\0000317}}
+.contact a {
+  color: #000000; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_top-blocks\.scss}line{font-family:\0000321}}
+.fa-money:before {
+  content: "\f0d6"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_top-blocks\.scss}line{font-family:\0000326}}
+.fa-map-marker:before {
+  content: "\f041"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_top-blocks\.scss}line{font-family:\0000331}}
+.fa-thumbs-down:before {
+  content: "\f165"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_top-blocks\.scss}line{font-family:\0000336}}
+.fa-dot-circle-o:before {
+  content: "\f192"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_blog\.scss}line{font-family:\000031}}
+.post-list h2 {
+  display: inline-block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_blog\.scss}line{font-family:\000034}}
+.post-meta {
+  display: inline-block;
+  color: #616265; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_blog\.scss}line{font-family:\000038}}
+.post-list a {
+  background: none;
+  padding: 0.625rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_blog\.scss}line{font-family:\0000312}}
+.popular a, .categories a {
+  background: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_blog\.scss}line{font-family:\0000315}}
+.popular, .categories {
+  margin-left: 0; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\000031}}
+.site-footer {
+  text-align: center;
+  border-top: 1px solid #000000;
+  padding: 3.75rem 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\000036}}
 .footer-social a {
   height: 25px;
   line-height: 25px !important;
@@ -6693,16 +6880,16 @@ th.hide-for-touch {
   transform: rotate(45deg);
   transition: all 500ms ease 0s;
   width: 25px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000319}}
   .footer-social a:hover {
     background: #000000;
     color: #FFFFFF; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000324}}
 .footer-social a i {
   transform: rotate(-45deg); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000327}}
 .fa {
   display: inline-block;
   font-style: normal;
@@ -6719,22 +6906,387 @@ th.hide-for-touch {
   text-rendering: auto;
   -moz-osx-font-smoothing: grayscale; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000344}}
 .fa-facebook::before {
   content: "\f09a"; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000347}}
 .fa-twitter::before {
   content: "\f099"; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000350}}
 .fa-linkedin::before {
   content: "\f0e1"; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000353}}
 .fa-stack::before {
   content: "\f16c"; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000356}}
 .fa-github-alt::before {
   content: "\f113"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\000032}}
+.code {
+  background-color: #f5f5f5;
+  padding: 0.3125rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\000036}}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  display: block;
+  font-size: 13px;
+  line-height: 1.42857;
+  margin: 0 0 10px;
+  padding: 9.5px;
+  word-break: break-all;
+  word-wrap: break-word; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000318}}
+  pre code {
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    white-space: pre-wrap; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000327}}
+.highlight .lineno {
+  color: #ccc;
+  display: inline-block;
+  padding: 0 5px;
+  border-right: 1px solid #ccc;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000336}}
+.highlight pre code {
+  display: block;
+  white-space: pre;
+  overflow-x: auto;
+  word-wrap: normal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000342}}
+.lineno::-moz-selection {
+  background-color: transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000345}}
+.lineno::selection {
+  background-color: transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000348}}
+.highlight {
+  background: #ffffff; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000351}}
+.highlight .c {
+  color: #999988;
+  font-style: italic; }
+
+/* Comment */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000357}}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2; }
+
+/* Error */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000363}}
+.highlight .k {
+  font-weight: bold; }
+
+/* Keyword */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000368}}
+.highlight .o {
+  font-weight: bold; }
+
+/* Operator */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000373}}
+.highlight .cm {
+  color: #999988;
+  font-style: italic; }
+
+/* Comment.Multiline */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000379}}
+.highlight .cp {
+  color: #999999;
+  font-weight: bold; }
+
+/* Comment.Preproc */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000385}}
+.highlight .c1 {
+  color: #999988;
+  font-style: italic; }
+
+/* Comment.Single */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000391}}
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic; }
+
+/* Comment.Special */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\0000398}}
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd; }
+
+/* Generic.Deleted */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003104}}
+.highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa; }
+
+/* Generic.Deleted.Specific */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003110}}
+.highlight .ge {
+  font-style: italic; }
+
+/* Generic.Emph */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003115}}
+.highlight .gr {
+  color: #aa0000; }
+
+/* Generic.Error */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003120}}
+.highlight .gh {
+  color: #999999; }
+
+/* Generic.Heading */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003125}}
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd; }
+
+/* Generic.Inserted */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003131}}
+.highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa; }
+
+/* Generic.Inserted.Specific */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003137}}
+.highlight .go {
+  color: #888888; }
+
+/* Generic.Output */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003142}}
+.highlight .gp {
+  color: #555555; }
+
+/* Generic.Prompt */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003147}}
+.highlight .gs {
+  font-weight: bold; }
+
+/* Generic.Strong */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003152}}
+.highlight .gu {
+  color: #aaaaaa; }
+
+/* Generic.Subheading */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003157}}
+.highlight .gt {
+  color: #aa0000; }
+
+/* Generic.Traceback */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003162}}
+.highlight .kc {
+  font-weight: bold; }
+
+/* Keyword.Constant */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003167}}
+.highlight .kd {
+  font-weight: bold; }
+
+/* Keyword.Declaration */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003172}}
+.highlight .kp {
+  font-weight: bold; }
+
+/* Keyword.Pseudo */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003177}}
+.highlight .kr {
+  font-weight: bold; }
+
+/* Keyword.Reserved */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003182}}
+.highlight .kt {
+  color: #445588;
+  font-weight: bold; }
+
+/* Keyword.Type */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003188}}
+.highlight .m {
+  color: #009999; }
+
+/* Literal.Number */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003193}}
+.highlight .s {
+  color: #d14; }
+
+/* Literal.String */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003198}}
+.highlight .na {
+  color: #008080; }
+
+/* Name.Attribute */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003203}}
+.highlight .nb {
+  color: #0086B3; }
+
+/* Name.Builtin */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003208}}
+.highlight .nc {
+  color: #445588;
+  font-weight: bold; }
+
+/* Name.Class */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003214}}
+.highlight .no {
+  color: #008080; }
+
+/* Name.Constant */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003219}}
+.highlight .ni {
+  color: #800080; }
+
+/* Name.Entity */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003224}}
+.highlight .ne {
+  color: #990000;
+  font-weight: bold; }
+
+/* Name.Exception */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003230}}
+.highlight .nf {
+  color: #990000;
+  font-weight: bold; }
+
+/* Name.Function */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003236}}
+.highlight .nn {
+  color: #555555; }
+
+/* Name.Namespace */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003241}}
+.highlight .nt {
+  color: #000080; }
+
+/* Name.Tag */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003246}}
+.highlight .nv {
+  color: #008080; }
+
+/* Name.Variable */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003251}}
+.highlight .ow {
+  font-weight: bold; }
+
+/* Operator.Word */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003256}}
+.highlight .w {
+  color: #bbbbbb; }
+
+/* Text.Whitespace */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003261}}
+.highlight .mf {
+  color: #009999; }
+
+/* Literal.Number.Float */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003266}}
+.highlight .mh {
+  color: #009999; }
+
+/* Literal.Number.Hex */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003271}}
+.highlight .mi {
+  color: #009999; }
+
+/* Literal.Number.Integer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003276}}
+.highlight .mo {
+  color: #009999; }
+
+/* Literal.Number.Oct */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003281}}
+.highlight .sb {
+  color: #d14; }
+
+/* Literal.String.Backtick */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003286}}
+.highlight .sc {
+  color: #d14; }
+
+/* Literal.String.Char */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003291}}
+.highlight .sd {
+  color: #d14; }
+
+/* Literal.String.Doc */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003296}}
+.highlight .s2 {
+  color: #d14; }
+
+/* Literal.String.Double */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003301}}
+.highlight .se {
+  color: #d14; }
+
+/* Literal.String.Escape */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003306}}
+.highlight .sh {
+  color: #d14; }
+
+/* Literal.String.Heredoc */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003311}}
+.highlight .si {
+  color: #d14; }
+
+/* Literal.String.Interpol */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003316}}
+.highlight .sx {
+  color: #d14; }
+
+/* Literal.String.Other */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003321}}
+.highlight .sr {
+  color: #009926; }
+
+/* Literal.String.Regex */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003326}}
+.highlight .s1 {
+  color: #d14; }
+
+/* Literal.String.Single */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003331}}
+.highlight .ss {
+  color: #990073; }
+
+/* Literal.String.Symbol */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003336}}
+.highlight .bp {
+  color: #999999; }
+
+/* Name.Builtin.Pseudo */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003341}}
+.highlight .vc {
+  color: #008080; }
+
+/* Name.Variable.Class */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003346}}
+.highlight .vg {
+  color: #008080; }
+
+/* Name.Variable.Global */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003351}}
+.highlight .vi {
+  color: #008080; }
+
+/* Name.Variable.Instance */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_single\.scss}line{font-family:\00003356}}
+.highlight .il {
+  color: #009999; }

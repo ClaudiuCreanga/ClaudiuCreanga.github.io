@@ -6,11 +6,46 @@
   <body>
 
     {% include header.html %}
+    
+    {% include block.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
+    <div class="wrapper">
+	    
+	  {% if page.url == "/index.html" or page.url == "" %}
+	  
+  	  	<h1 class="page-heading">Latest posts</h1>
+  	  	
+  	  {% elsif page.url == "/magento.html"  %}
+  	  
+	  	<h1 class="page-heading">All posts in Magento category</h1>
+  	  
+  	  {% elsif page.url == "/google-analytics.html"  %}
+  	  
+	  	<h1 class="page-heading">All posts in Google Analytics category</h1>
+  	  
+  	  {% elsif page.url == "/frontend.html"  %}
+  	  
+	  	<h1 class="page-heading">All posts in Frontend category</h1>
+  	  
+  	  	{% else %}
+  	  	<h1 class="page-heading">{{ page.title }}</h1>
+  	  	
+	  {% endif %}
+	    
+      <div class="col-main">
+	      
         {{ content }}
+        
       </div>
+      
+      <div class="col-right">
+	  	
+	  	{% include popular.html %}
+	  	
+	    {% include categories.html %}
+
+      </div>
+      
     </div>
 
     {% include footer.html %}

@@ -1,3 +1,23 @@
 .awesome{
     font-family: "FontAwesome", "ralewayregular", Georgia, Arial; 
 }
+.cool-bullet li{
+	&:before{
+		@extend .awesome;
+		content: "\f192";
+		-moz-osx-font-smoothing: grayscale;
+	    display: inline-block;
+	    font-feature-settings: normal;
+	    font-kerning: auto;
+	    font-language-override: normal;
+	    font-size: inherit;
+	    font-size-adjust: none;
+	    font-stretch: normal;
+	    font-style: normal;
+	    font-synthesis: weight style;
+	    font-variant: normal;
+	    font-weight: normal;
+	    line-height: 1;
+	    text-rendering: auto;
+	}
+}

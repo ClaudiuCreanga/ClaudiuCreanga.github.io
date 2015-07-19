@@ -1,0 +1,39 @@
+.blocks{
+	&>div{
+		display:none;
+		padding: $column-gutter 0 0 0;
+	}
+	p span{
+		text-transform: uppercase;
+		letter-spacing: rem-calc(1.5);
+		background: $smoke;
+		padding: rem-calc(5);
+	}
+}
+.projects a{
+	text-decoration: underline;
+	color: $black;
+}
+.contact a{
+	color: $black;
+}
+.fa-money{
+	&:before{
+		content: "\f0d6";
+	}
+}
+.fa-map-marker{
+	&:before{
+		content: "\f041";
+	}
+}
+.fa-thumbs-down{
+	&:before{
+		content: "\f165";
+	}
+}
+.fa-dot-circle-o{
+	&:before{
+		content: "\f192";
+	}
+}
