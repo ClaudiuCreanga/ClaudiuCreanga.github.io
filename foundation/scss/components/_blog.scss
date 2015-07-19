@@ -1,9 +1,15 @@
 .post-list h2{
-	display: inline-block;
+	display: inline;
+	@media #{$medium}{
+		display: inline-block;
+	}
 }
 .post-meta{
-	display: inline-block;
+	display: block;
 	color: $primary-color;
+	@media #{$medium}{
+		display: inline-block;
+	}
 }
 .post-list a{
 	background: none;

@@ -1,6 +1,9 @@
 .site-footer{
 	text-align: center;
-	padding: ($column-gutter * 2) 0;
+	padding: $column-gutter 0;
+	@media #{$medium}{
+		padding: ($column-gutter * 2) 0;
+	}
 	.wrapper{
 		padding:0;
 	}

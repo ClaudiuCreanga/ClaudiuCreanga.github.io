@@ -12,6 +12,12 @@ p{
 	letter-spacing: rem-calc(1);
 	line-height: rem-calc(22);
 }
+ul{
+	margin-left:0;
+	@media #{$medium}{
+		margin-left: rem-calc(18);
+	}
+}
 .lists{
 	font-size: rem-calc(13);
 	list-style-type: none;

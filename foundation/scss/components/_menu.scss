@@ -7,7 +7,7 @@
 	min-height: rem-calc(75);
 	.right{
 		li{
-			padding: rem-calc(25 30 20);
+			padding: rem-calc(25 29 20);
 		}
 	    a{
 			text-decoration: none;
@@ -37,9 +37,59 @@
 			}
 		}
 	}
-	.susuwatari{
-		background: url(../images/susuwatari.svg) no-repeat!important;
-		width: rem-calc(70);
-		height: rem-calc(70);
+}
+.susuwatari{
+	background: url(../images/susuwatari.svg) no-repeat!important;
+	width: rem-calc(70)!important;
+	height: rem-calc(70);
+}
+.susuwatari-mobile{
+	@extend .susuwatari;
+	position: relative;
+	top:rem-calc(5);
+	float: right;
+	margin-right: rem-calc(10);
+	display: inline-block;
+	width: rem-calc(40)!important;
+}
+//mobile
+.top-line-section{
+	background: $white;
+	box-shadow: 0px 1px 1px $black;
+	height: rem-calc(50);
+}
+.burger-icon {
+	background: url(../images/burger.svg) no-repeat top left / 50px;
+	display: inline-block;
+	width: rem-calc(50);
+	height:rem-calc(50);
+}
+.exit-off-canvas{
+	background: url(../images/close.svg) no-repeat top left / 40px!important;
+	display: inline-block;
+	width: rem-calc(40);
+	height:rem-calc(40);
+	margin: 5px auto 0;
+}
+.close-menu{
+	box-shadow: 0px 1px 1px $black;
+	height: rem-calc(50);
+}
+.nav-mobile{
+	list-style-type: none;
+	margin: 0;
+	li{
+		border-bottom: 1px solid $black;
+		padding: $column-gutter / 2;
+		text-align: center;
+		&:last-child{
+			border-bottom: none;
+		}
+		a{
+			text-transform: uppercase;
+			position: relative;
+			color: $primary-color;
+			text-decoration: none;
+		}
 	}
 }

@@ -229,8 +229,8 @@ $h2-font-size: rem-calc(16);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
-// $h2-font-reduction: rem-calc(10);
+$h1-font-reduction: rem-calc(4);
+$h2-font-reduction: rem-calc(3);
 // $h3-font-reduction: rem-calc(5);
 // $h4-font-reduction: rem-calc(5);
 // $h5-font-reduction: 0;
@@ -836,7 +836,7 @@ $h2-font-size: rem-calc(16);
 // Off Canvas Tab Bar Variables
 // $include-html-off-canvas-classes: $include-html-classes;
 
-// $tabbar-bg: $oil;
+$tabbar-bg: $white;
 // $tabbar-height: rem-calc(45);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
@@ -855,8 +855,8 @@ $h2-font-size: rem-calc(16);
 // $tabbar-header-margin: 0;
 
 // Off Canvas Menu Variables
-// $off-canvas-width: rem-calc(250);
-// $off-canvas-bg: $oil;
+$off-canvas-width: 100%;
+$off-canvas-bg: $white;
 // $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
 // $off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
 
@@ -898,9 +898,9 @@ $h2-font-size: rem-calc(16);
 // Off Canvas Back-Link Overlay
 // $off-canvas-overlay-transition: background 300ms ease;
 // $off-canvas-overlay-cursor: pointer;
-// $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, .5), 4px 0 4px rgba($black, .5);
-// $off-canvas-overlay-background: rgba($white, .2);
-// $off-canvas-overlay-background-hover: rgba($white, .05);
+$off-canvas-overlay-box-shadow: none;
+$off-canvas-overlay-background: none;
+$off-canvas-overlay-background-hover: none;
 
 // Transition Variables
 // $menu-slide: "transform 500ms ease";

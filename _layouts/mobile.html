@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+    
+    {% include block.html %}
+
+    <div class="wrapper">
+	    	    
+      <div class="col-main">
+	      
+        {{ content }}
+        
+      </div>
+      
+      <div class="col-right">
+	  	
+	  	{% include popular.html %}
+	  	
+	    {% include categories.html %}
+
+      </div>
+      
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

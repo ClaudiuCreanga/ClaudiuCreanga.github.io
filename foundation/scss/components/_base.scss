@@ -15,10 +15,7 @@
 	}
 	.col-right {
 		@include grid-column(12);
-		@media #{$small} {
-		  @include grid-column(3);
-		}
-		@media #{$medium} {
+		@media #{$large} {
 		  @include grid-column(3);
 		}
 	}
@@ -28,7 +25,10 @@
 }
 
 .page-heading{
-	padding:($column-gutter * 2) 0;
+	padding: $column-gutter 0;
+	@media #{$medium}{
+		padding:($column-gutter * 2) 0;
+	}
 }
 .col-right p{
 	margin-bottom: rem-calc(10);
