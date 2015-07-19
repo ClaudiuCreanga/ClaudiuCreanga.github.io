@@ -1,8 +1,6 @@
 # Site settings
-title: Claudiu Creanga Blog
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Hi, I am Claudiu.
+title: Claudiu Creanga
+description: Claudiu Creanga - developer: Magento, Wordpress, RoR. Working primarily with: php, python and javascript.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://claudiucreanga.me" # the base hostname & protocol for your site
 twitter_username: ClaudiuCreanga
