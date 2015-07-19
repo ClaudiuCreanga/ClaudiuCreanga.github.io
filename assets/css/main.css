@@ -6643,19 +6643,19 @@ th.hide-for-touch {
 .top-bar {
   letter-spacing: 0.0625rem;
   min-height: 4.6875rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000037}}
-  .top-bar li {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000038}}
+  .top-bar .right li {
     padding: 1.5625rem 1.875rem 1.25rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000310}}
-  .top-bar a {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000311}}
+  .top-bar .right a {
     text-decoration: none;
     position: relative;
     padding: 0 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000314}}
-    .top-bar a:hover {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000315}}
+    .top-bar .right a:hover {
       color: #000000; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000317}}
-    .top-bar a:before {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000318}}
+    .top-bar .right a:before {
       content: "";
       position: absolute;
       width: 100%;
@@ -6668,11 +6668,16 @@ th.hide-for-touch {
       transform: scaleX(0);
       -webkit-transition: all 0.3s ease-in-out 0s;
       transition: all 0.3s ease-in-out 0s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000331}}
-    .top-bar a:hover:before {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000332}}
+    .top-bar .right a:hover:before {
       visibility: visible;
       -webkit-transform: scaleX(1);
       transform: scaleX(1); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000339}}
+  .top-bar .susuwatari {
+    background: url(../images/susuwatari.svg) no-repeat !important;
+    width: 4.375rem;
+    height: 4.375rem; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\000031}}
 .footer-social a {

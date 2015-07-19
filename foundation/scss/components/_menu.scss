@@ -4,34 +4,41 @@
 .top-bar{
 	letter-spacing: rem-calc(1);
 	min-height: rem-calc(75);
-	li{
-		padding: rem-calc(25 30 20);
+	.right{
+		li{
+			padding: rem-calc(25 30 20);
+		}
+	    a{
+			text-decoration: none;
+			position: relative;
+			padding: 0!important;
+			&:hover{
+				color:$black;
+			}
+			&:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				bottom: 0;
+				left: 0;
+				background-color: #000;
+				visibility: hidden;
+				-webkit-transform: scaleX(0);
+				transform: scaleX(0);
+				-webkit-transition: all 0.3s ease-in-out 0s;
+				transition: all 0.3s ease-in-out 0s;
+			}
+			&:hover:before {
+				visibility: visible;
+				-webkit-transform: scaleX(1);
+				transform: scaleX(1);
+			}
+		}
 	}
-	a{
-		text-decoration: none;
-		position: relative;
-		padding: 0!important;
-		&:hover{
-			color:$black;
-		}
-		&:before {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 1px;
-			bottom: 0;
-			left: 0;
-			background-color: #000;
-			visibility: hidden;
-			-webkit-transform: scaleX(0);
-			transform: scaleX(0);
-			-webkit-transition: all 0.3s ease-in-out 0s;
-			transition: all 0.3s ease-in-out 0s;
-		}
-		&:hover:before {
-			visibility: visible;
-			-webkit-transform: scaleX(1);
-			transform: scaleX(1);
-		}
+	.susuwatari{
+		background: url(../images/susuwatari.svg) no-repeat!important;
+		width: rem-calc(70);
+		height: rem-calc(70);
 	}
 }
