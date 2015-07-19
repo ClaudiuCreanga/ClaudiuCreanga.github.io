@@ -36,5 +36,10 @@
 		  }
 	  })
 	  
+	  /***** TOGGLE BUTTON TOP *****/
+    $(".left-off-canvas-toggle").click(function(){
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+    })
+	  
   });
 })(jQuery);
