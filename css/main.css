@@ -232,4 +232,5 @@ select {
 /* line 1, ../foundation/scss/components/_menu.scss */
 * {
   display: none !important;
+  color: red;
 }
