@@ -1,6 +1,6 @@
 # Site settings
 title: Claudiu Creanga
-description: Claudiu Creanga - developer: Magento, Wordpress, RoR. Working primarily with: php, python and javascript.
+description: Claudiu Creanga - developer for Magento, Wordpress, RoR. Working primarily with php, python and javascript.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://claudiucreanga.me" # the base hostname & protocol for your site
 twitter_username: ClaudiuCreanga
