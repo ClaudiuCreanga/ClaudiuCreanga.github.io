@@ -39,18 +39,21 @@
 	}
 }
 .susuwatari{
-	background: url(../images/susuwatari.svg) no-repeat!important;
+	background: url(../images/susuwatari.gif) no-repeat!important;
 	width: rem-calc(70)!important;
 	height: rem-calc(70);
+	position: relative;
+	top:rem-calc(4);
 }
 .susuwatari-mobile{
-	@extend .susuwatari;
+	background: url(../images/susuwatari.svg) no-repeat!important;
 	position: relative;
 	top:rem-calc(5);
 	float: right;
 	margin-right: rem-calc(10);
 	display: inline-block;
 	width: rem-calc(40)!important;
+	height: rem-calc(40);
 }
 //mobile
 .top-line-section{

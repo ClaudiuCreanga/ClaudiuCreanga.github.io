@@ -6810,34 +6810,38 @@ ul {
       transform: scaleX(1); }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000341}}
-.susuwatari, .susuwatari-mobile {
-  background: url(../images/susuwatari.svg) no-repeat !important;
+.susuwatari {
+  background: url(../images/susuwatari.gif) no-repeat !important;
   width: 4.375rem !important;
-  height: 4.375rem; }
+  height: 4.375rem;
+  position: relative;
+  top: 0.25rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000348}}
 .susuwatari-mobile {
+  background: url(../images/susuwatari.svg) no-repeat !important;
   position: relative;
   top: 0.3125rem;
   float: right;
   margin-right: 0.625rem;
   display: inline-block;
-  width: 2.5rem !important; }
+  width: 2.5rem !important;
+  height: 2.5rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000359}}
 .top-line-section {
   background: #FFFFFF;
   box-shadow: 0px 1px 1px #000000;
   height: 3.125rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000364}}
 .burger-icon {
   background: url(../images/burger.svg) no-repeat top left/50px;
   display: inline-block;
   width: 3.125rem;
   height: 3.125rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000370}}
 .exit-off-canvas {
   background: url(../images/close.svg) no-repeat top left/40px !important;
   display: inline-block;
@@ -6845,24 +6849,24 @@ ul {
   height: 2.5rem;
   margin: 5px auto 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000377}}
 .close-menu {
   box-shadow: 0px 1px 1px #000000;
   height: 3.125rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000381}}
 .nav-mobile {
   list-style-type: none;
   margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000384}}
   .nav-mobile li {
     border-bottom: 1px solid #000000;
     padding: 0.9375rem;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000388}}
     .nav-mobile li:last-child {
       border-bottom: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\0000391}}
     .nav-mobile li a {
       text-transform: uppercase;
       position: relative;
