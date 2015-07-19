@@ -4467,14 +4467,14 @@ meta.foundation-mq-topbar {
       z-index: 99; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003149}}
     .fixed.expanded:not(.top-bar) .top-bar-section {
-      margin-top: 2.8125rem;
+      margin-top: 1.75rem;
       z-index: 98; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003156}}
 .top-bar {
   background: #FFFFFF;
-  height: 2.8125rem;
-  line-height: 2.8125rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
   margin-bottom: 0;
   overflow: hidden;
   position: relative; }
@@ -4515,12 +4515,12 @@ meta.foundation-mq-topbar {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003209}}
   .top-bar .name {
     font-size: 16px;
-    height: 2.8125rem;
+    height: 1.75rem;
     margin: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003214}}
     .top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
       font-size: 1.0625rem;
-      line-height: 2.8125rem;
+      line-height: 1.75rem;
       margin: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003219}}
       .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
@@ -4540,8 +4540,8 @@ meta.foundation-mq-topbar {
       display: block;
       font-size: 0.8125rem;
       font-weight: bold;
-      height: 2.8125rem;
-      line-height: 2.8125rem;
+      height: 1.75rem;
+      line-height: 1.75rem;
       padding: 0 0.625rem 0;
       position: relative;
       text-transform: uppercase; }
@@ -4615,7 +4615,7 @@ meta.foundation-mq-topbar {
     width: 100%; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003331}}
   .top-bar-section ul li {
-    background: #333333; }
+    background: #FFFFFF; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003334}}
     .top-bar-section ul li > a {
       color: #616265;
@@ -4767,7 +4767,7 @@ meta.foundation-mq-topbar {
           color: #FFFFFF; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003373}}
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background-color: #555555;
+      background-color: #FFFFFF;
       color: #232323;
       background: #FFFFFF; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003383}}
@@ -4904,7 +4904,7 @@ meta.foundation-mq-topbar {
       font-size: 0.875rem;
       height: 1.75rem;
       position: relative;
-      top: 0.53125rem; }
+      top: 0rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003517}}
     .top-bar.expanded {
       background: #FFFFFF; }
@@ -4932,23 +4932,23 @@ meta.foundation-mq-topbar {
           display: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003545}}
     .top-bar-section li.hover > a:not(.button) {
-      background-color: #555555;
+      background-color: #FFFFFF;
       background: #FFFFFF;
       color: #232323; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003555}}
     .top-bar-section li:not(.has-form) a:not(.button) {
       background: #FFFFFF;
-      line-height: 2.8125rem;
+      line-height: 1.75rem;
       padding: 0 0.625rem 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003559}}
       .top-bar-section li:not(.has-form) a:not(.button):hover {
-        background-color: #555555;
+        background-color: #FFFFFF;
         background: #FFFFFF; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003569}}
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       background: #FFFFFF;
       color: #232323;
-      line-height: 2.8125rem;
+      line-height: 1.75rem;
       padding: 0 0.625rem 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003574}}
       .top-bar-section li.active:not(.has-form) a:not(.button):hover {
@@ -4967,7 +4967,7 @@ meta.foundation-mq-topbar {
         border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
         border-top-style: solid;
         margin-top: -2.5px;
-        top: 1.40625rem; }
+        top: 0.875rem; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003594}}
     .top-bar-section .has-dropdown.moved {
       position: relative; }
@@ -5011,23 +5011,23 @@ meta.foundation-mq-topbar {
       top: auto; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003632}}
       .top-bar-section .dropdown li a {
-        background: #333333;
+        background: #FFFFFF;
         color: #FFFFFF;
-        line-height: 2.8125rem;
+        line-height: 1.75rem;
         padding: 12px 0.625rem 0;
         white-space: nowrap; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003641}}
       .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
-        background: #333333;
+        background: #FFFFFF;
         color: #FFFFFF; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003646}}
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
-        background-color: #555555;
+        background-color: #FFFFFF;
         color: #232323;
         background: #222222; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003655}}
       .top-bar-section .dropdown li label {
-        background: #333333;
+        background: #FFFFFF;
         white-space: nowrap; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003661}}
       .top-bar-section .dropdown li .dropdown {
@@ -5040,12 +5040,12 @@ meta.foundation-mq-topbar {
       border-bottom: none;
       border-top: none;
       clear: none;
-      height: 2.8125rem;
+      height: 1.75rem;
       width: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003678}}
     .top-bar-section .has-form {
       background: #FFFFFF;
-      height: 2.8125rem;
+      height: 1.75rem;
       padding: 0 0.625rem 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003686}}
     .top-bar-section .right li .dropdown {
@@ -5064,7 +5064,7 @@ meta.foundation-mq-topbar {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003708}}
   .no-js .top-bar-section ul li:hover > a {
-    background-color: #555555;
+    background-color: #FFFFFF;
     background: #FFFFFF;
     color: #232323; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_top-bar\.scss}line{font-family:\00003717}}
@@ -6621,6 +6621,10 @@ th.hide-for-touch {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003489}}
   .show-for-print {
     display: none !important; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_mixins\.scss}line{font-family:\000031}}
+.awesome, .fa {
+  font-family: "FontAwesome", "ralewayregular", Georgia, Arial; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_base\.scss}line{font-family:\000031}}
 #back-top {
   position: fixed;
@@ -6637,7 +6641,68 @@ th.hide-for-touch {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000034}}
 .top-bar {
-  letter-spacing: 0.0625rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000036}}
+  letter-spacing: 0.0625rem;
+  min-height: 4.6875rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_menu\.scss}line{font-family:\000037}}
   .top-bar li {
     padding: 1.5625rem 1.875rem 1.25rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\000031}}
+.footer-social a {
+  height: 25px;
+  line-height: 25px !important;
+  position: relative;
+  margin: 0px 6px;
+  text-align: center;
+  display: inline-block;
+  color: #111;
+  border: 1px solid #111;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all 500ms ease 0s;
+  width: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000314}}
+  .footer-social a:hover {
+    background: #000000;
+    color: #FFFFFF; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000319}}
+.footer-social a i {
+  transform: rotate(-45deg); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000322}}
+.fa {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-feature-settings: normal;
+  font-language-override: normal;
+  font-kerning: auto;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-size: inherit;
+  text-rendering: auto;
+  -moz-osx-font-smoothing: grayscale; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000339}}
+.fa-facebook::before {
+  content: "\f09a"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000342}}
+.fa-twitter::before {
+  content: "\f099"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000345}}
+.fa-linkedin::before {
+  content: "\f0e1"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000348}}
+.fa-stack::before {
+  content: "\f16c"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/claudiucreanga\/sites\/ClaudiuCreanga\/foundation\/scss\/components\/_footer\.scss}line{font-family:\0000351}}
+.fa-github-alt::before {
+  content: "\f113"; }

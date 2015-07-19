@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ralewayregular';
-    src: url('../fonts/raleway-regular-webfont.eot');
+    src: url('raleway-regular-webfont.eot');
     src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
          url('../fonts/raleway-regular-webfont.woff') format('woff'),
