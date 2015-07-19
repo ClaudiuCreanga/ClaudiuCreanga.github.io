@@ -9,9 +9,9 @@
 	background: none;
 	padding: rem-calc(10);
 }
-.popular a, .categories a{
-	background: none;
-}
 .popular, .categories{
 	margin-left: 0;
+	a{
+		background: none;
+	}
 }

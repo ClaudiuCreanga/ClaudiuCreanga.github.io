@@ -30,7 +30,9 @@
 .page-heading{
 	padding:($column-gutter * 2) 0;
 }
-
+.col-right p{
+	margin-bottom: rem-calc(10);
+}
 #back-top {
   position: fixed;
   bottom:20px;
@@ -38,5 +40,8 @@
   z-index: 100; 
   a{
 	  background: url(../images/back-to-top.svg) no-repeat;
+	  display: block;
+	  width: rem-calc(30);
+	  height: rem-calc(30);
   }
 }

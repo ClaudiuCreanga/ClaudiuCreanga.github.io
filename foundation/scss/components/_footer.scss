@@ -1,7 +1,9 @@
 .site-footer{
 	text-align: center;
-	border-top:1px solid $black;
 	padding: ($column-gutter * 2) 0;
+	.wrapper{
+		padding:0;
+	}
 }
 .footer-social a {
     height: 25px;
@@ -55,4 +57,12 @@
 }
 .fa-github-alt::before {
     content: "\f113";
+}
+.totoro{
+	background: url(../images/totoro.svg) no-repeat;
+	display: inline-block;
+	height:rem-calc(35);
+	width: rem-calc(35);
+	position: relative;
+	top: $column-gutter / 2;
 }
