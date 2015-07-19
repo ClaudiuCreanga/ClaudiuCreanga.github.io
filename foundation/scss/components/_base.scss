@@ -1,0 +1,9 @@
+#back-top {
+  position: fixed;
+  bottom:20px;
+  right: 2%;
+  z-index: 100; 
+  a{
+	  background: url(../images/back-to-top.svg) no-repeat;
+  }
+}
