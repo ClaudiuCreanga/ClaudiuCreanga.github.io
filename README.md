@@ -1,1 +1,1 @@
-Minimalistic Jekyll blog using Foundation and sass.
+Minimalistic responsive Jekyll blog using Foundation and sass.
