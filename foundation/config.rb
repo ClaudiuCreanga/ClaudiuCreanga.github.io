@@ -8,12 +8,9 @@ sass_dir = "scss"
 images_dir = "images"
 javascripts_dir = "js"
 fonts_dir = "fonts"
-output_style = :nested
-environment = :development
+output_style = :compressed
+environment = :production
 
-sass_options = {:sourcemap => true}
-sass_options = {:debug => true}
-sass_options = {:debug_info => true}
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
