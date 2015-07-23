@@ -3,7 +3,7 @@ layout: post
 title:  "Get magento super attributes as lists"
 date:   2015-07-19 23:26:17
 categories: magento
-description: "Here is an easy way to get magento super-attributes as lists"
+description: "By default, magento returns super-attributes as a dropdown. Here is an easy way to get transform it in a list so that you can manipulate it easily"
 ---
 Configurable products in magento come by default with a select dropdown where you can choose the simple product associated to it. This can sometimes be aesthetically unpleasant and requires one more step from the customer (selecting the simple product).
 

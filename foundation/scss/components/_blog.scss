@@ -15,9 +15,16 @@
 	background: none;
 	padding: rem-calc(10);
 }
+.post-list p{
+	padding-left:rem-calc(25);
+}
 .popular, .categories{
 	margin-left: 0;
 	a{
 		background: none;
+	}
+}
+.post-content{
+	.cool-bullet{
 	}
 }
