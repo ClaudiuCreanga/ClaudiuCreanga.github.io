@@ -2,7 +2,7 @@
 layout: post
 title:  "Upgrade to google universal analytics on magento"
 date:   2015-07-22 23:26:17
-categories: magento, analytics
+categories: magento
 description: "Magento 1.x comes with a google classic analytics module, which is cool. But the new standard is universal analytics. Here is how to upgrade, the right way."
 ---
 There are several reasons why you should upgrade to universal analytics: 
