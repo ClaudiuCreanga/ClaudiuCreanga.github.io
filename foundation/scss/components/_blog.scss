@@ -15,6 +15,12 @@
 	background: none;
 	padding: rem-calc(10);
 }
+.post-list{
+	margin-left:0;
+	@media #{$large}{
+		margin-left:rem-calc(18);
+	}
+}
 .post-list p{
 	padding-left:rem-calc(25);
 }
@@ -27,7 +33,9 @@
 		padding-bottom: rem-calc(5);
 	}
 }
-.post-content{
-	.cool-bullet{
-	}
+.comments{
+	margin-top: $column-gutter / 2;
+}
+.comments #footer ul{
+	display:none;  
 }
