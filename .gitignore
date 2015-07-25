@@ -2,3 +2,14 @@ _site
 .sass-cache
 *.DS_Store
 /foundation/foundation/*
+Gemfile.lock
+*.gem
+pkg/
+*.swp
+*~
+.bundle/
+bbin/
+.ruby-version
+.ruby-gemset
+tmp/*
+.jekyll-metadata
