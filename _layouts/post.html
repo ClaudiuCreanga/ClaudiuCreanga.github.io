@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
 
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta" itemprop="datePublished" datetime="{{ page.date | date: '%b %-d, %Y' }}">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
     
   </header>
 
-  <article class="post-content">
+  <article class="post-content" itemprop="articleBody">
     {{ content }}
   </article>
   

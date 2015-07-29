@@ -13,23 +13,23 @@
 	    
 	  {% if page.url == "/index.html" or page.url == "" %}
 	  
-  	  	<h1 class="page-heading">Latest posts</h1>
+  	  	<h1 class="page-heading" itemprop="name">Latest posts</h1>
   	  	
   	  {% elsif page.url == "/magento.html"  %}
   	  
-	  	<h1 class="page-heading">All posts in Magento category</h1>
+	  	<h1 class="page-heading" itemprop="name">All posts in Magento category</h1>
   	  
   	  {% elsif page.url == "/google-analytics.html"  %}
   	  
-	  	<h1 class="page-heading">All posts in Google Analytics category</h1>
+	  	<h1 class="page-heading" itemprop="name">All posts in Google Analytics category</h1>
   	  
   	  {% elsif page.url == "/frontend.html"  %}
   	  
-	  	<h1 class="page-heading">All posts in Frontend category</h1>
+	  	<h1 class="page-heading" itemprop="name">All posts in Frontend category</h1>
   	  
   	  {% else %}
   	  
-  	  	<h1 class="page-heading">{{ page.title }}</h1>
+  	  	<h1 class="page-heading" itemprop="name">{{ page.title }}</h1>
   	  	
 	  {% endif %}
 	    

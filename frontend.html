@@ -4,15 +4,15 @@ title: "List of posts about new frontend technologies"
 description: "Posts about new frontend technologies, mainly javascript and its cool libraries"
 ---
 
-<div class="home">
+<div class="home" itemscope="" itemtype="http://schema.org/Blog">
   <p>Currently there are no posts here.</p>
   <ul class="post-list lists cool-bullet">
 	{% for post in site.categories.frontend %}
       <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <h2 itemscope="" itemtype="http://schema.org/BlogPosting">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" itemprop="name">{{ post.title }}</a>
         </h2>
-        <span class="post-meta">- {{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta" itemprop="datePublished" datetime="{{ page.date | date: '%b %-d, %Y' }}">- {{ post.date | date: "%b %-d, %Y" }}</span>
         <p> {{ post.description }} </p>
       </li>
     {% endfor %}
