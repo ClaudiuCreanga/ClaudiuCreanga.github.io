@@ -22,8 +22,8 @@ To every node in your page you can attach an onclick event. Here we attach it to
 <li>&nbsp; event - it is the type of hit. In our case it is an event. When loading a new page it is a pageview.</li>
 <li>&nbsp; category-page - it is the category of our event. It is used to differentiate between events. Usually you want to test multiple types of events on multiple pages.</li>
 <li>&nbsp; add-to-cart - it is the action of the event. You should use a meaningful name.</li>
-<li>&nbsp; <?php //echo $_product->getName(); ?> - it is the event's label. Here I use the name of the product. Depending on your theme configuration you should change it, or you can just use a string.</li>
-<li>&nbsp; <?php //echo preg_replace('/\..*/', '', $_product->getFinalPrice()); ?> - this is the value of the event. Here I get the final price, but because it gets returned with 4 decimals in my theme I strip everything that comes after the dot. This should contain a number, if it contains any other character, like dots, it returns an error. This field should be changed based on your theme.</li>
+<li>&nbsp; $_product->getName(); - it is the event's label. Here I use the name of the product. Depending on your theme configuration you should change it, or you can just use a string.</li>
+<li>&nbsp; preg_replace('/\..*/', '', $_product->getFinalPrice()); - this is the value of the event. Here I get the final price, but because it gets returned with 4 decimals in my theme I strip everything that comes after the dot. This should contain a number, if it contains any other character, like dots, it returns an error. This field should be changed based on your theme.</li>
 <li>&nbsp; {'nonInteraction': 1} - setting the interaction to true means that the click event does not influence your bounce rate. Otherwise your event will be treated like an interaction and it will skew your bounce rate stats.</li>
 </ul>
 
