@@ -27,7 +27,7 @@ To every node in your page you can attach an onclick event. Here we attach it to
 <li>&nbsp; {'nonInteraction': 1} - setting the interaction to true means that the click event does not influence your bounce rate. Otherwise your event will be treated like an interaction and it will skew your bounce rate stats.</li>
 </ul>
 
-Now you can go into your analytics dashboard and under Real-Time -> Events you should see your data right away. Event statistics are showed in the Behaviour section -> Events (it usually takes over 12h to populate).
+Now you can go into your analytics dashboard and under <span class="code"Real-Time -> Events</span> you should see your data right away. Event statistics are showed in the section<span class="code"Behaviour -> Events</span> (it usually takes over 12h to populate).
 
 A full example of a tracked button event in magento:
 
