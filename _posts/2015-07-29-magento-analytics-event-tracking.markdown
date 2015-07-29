@@ -3,11 +3,11 @@ layout: post
 title:  "Add event tracking for Google Analytics in magento"
 date:   2015-07-29 23:26:17
 categories: analytics
-description: "There are quite a few modules out there that add event tracking to magento. Unless you want a complex tracking system, tracking events with Google Analytics can be done with a few lines of code."
+description: "There are quite a few modules out there that add event tracking to magento. Unless you want a complex tracking system, tracking events with Google Analytics can be done with a few lines of code. No need for extensions."
 ---
 As you may know, GA, by default, records only page loads. Only when the url is changed the <span class="code">ga function</span> sends data to your analytics account, as you can see from the standard tracking code: <span class="code">ga('send', 'pageview')</span> But, obviously, you would want to track more than page changes: add to cart clicks, newsletter signups etc.
 
-One thing that I would want to know is if customers actually buy products from the category page, or is that add to basket button on category pages useless. To test it you just have to add an <span class="code">onclick event</span> to the add to basket button:
+One thing that I would want to know is, for example, if customers actually buy products from the category page, or is that add to basket button on category pages useless. To test it you just have to add an <span class="code">onclick event</span> to the add to basket button:
 
 {% highlight javascript linenos %}
 onClick="ga('send', 'event', 'category-page', 'add-to-cart', '<?php echo $_product->getName(); ?>', '<?php echo preg_replace('/\..*/', '', $_product->getFinalPrice()); ?>',{'nonInteraction': 1});"
@@ -25,7 +25,7 @@ To every node in your page you can attach an onclick event. Here we attach it to
 <li>{'nonInteraction': 1} - setting the interaction to true means that the click event does not influence your bounce rate. Otherwise your event will be treated like an interaction and it will skew your bounce rate stats.</li>
 </ul>
 
-Now you can go into your analytics dashboard and under Real-Time -> Events you should see your data right away. Event statistics are showed in the Behaviour section -> Events.
+Now you can go into your analytics dashboard and under Real-Time -> Events you should see your data right away. Event statistics are showed in the Behaviour section -> Events (it usually takes over 12h to populate).
 
 A full example of a tracked button event in magento:
 
