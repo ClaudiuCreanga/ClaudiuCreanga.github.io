@@ -5,18 +5,20 @@ date:   2015-07-30 23:26:17
 categories: magento
 description: "Magento does not offer an easy way to manage the order of assets being loaded, css or javascript. Here is a quick simple module that can help."
 ---
-Magento loads first the javascript files contained in root/js folder and then those in skin_js. This provides a good enough structure so that you can load core javascript files first and then your own ones in skin_js. But say you have multiple layouts files that each loads javascript files which depends on each other. For example you have a custom module that needs the jquery library, but its javascript files are loaded before so it returns an error. 
+Magento loads first the javascript files contained in root/js folder and then those in skin_js. This provides a good enough structure so that you can load core javascript files first and then your own ones in skin_js. 
 
-We create a simple module to be able to specify the order of css and javascript files. First register it. Create a file named <span class="code">Company_Ordersuccess.xml</span> inside <span class="code">app/etc/modules</span> and insert:
+But say you have multiple layouts files that each loads javascript files which depend on each other. For example you have a custom module that needs the jquery library, but its javascript files are loaded before that and undefined jQuery variable. 
+
+We create a simple module to be able to specify the order of css and javascript files. First register it. Create a file named <span class="code">Company_ReorderAssets.xml</span> inside <span class="code">app/etc/modules</span> and insert:
 {% highlight xml linenos %}
 <?xml version="1.0"?>
 <config>
-	<modules>
-		<Company_Ordersuccess>
-			<active>true</active>
-			<codePool>local</codePool>
-		</Company_Ordersuccess>
-	</modules>
+    <modules>
+        <Company_ReorderAssets>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Company_ReorderAssets>
+    </modules>
 </config>
 {% endhighlight %}
 
@@ -86,7 +88,7 @@ class Company_ReorderAssets_Block_Page_Html_Head extends Mage_Page_Block_Html_He
 	    );
 	
 	    if (array_key_exists($after, $this->_data['items'])){
-	        // get the position 
+
 	        $pos = 1;
 	        foreach ($this->_data['items'] as $key => $options){
 	            if ($key == $after) :
@@ -107,7 +109,9 @@ class Company_ReorderAssets_Block_Page_Html_Head extends Mage_Page_Block_Html_He
 
 {% endhighlight %}
 
-The function <span class="code">addItemFirst</span> adds the first javascript or css file, but it will not ad it again if it is already added. It is used the same as the addItem function. The function <span class="code">addItemAfter</span> adds the needed css or js file after the first item. It's file path should be either js/file.js for root js folder or file.js for skin_js folder. Here it is how to use it in your layout.xml
+The function <span class="code">addItemFirst</span> adds the first javascript or css file, but it will not add it again if it is already added. It is used the same as the addItem function. The function <span class="code">addItemAfter</span> adds the needed css or js file after the first item. It's file path should be either js/file.js for root js folder or file.js for skin_js folder. 
+
+Here it is how to use it in your layout.xml:
 {% highlight xml linenos %}
 <?xml version="1.0"?>
 <layout version="0.1.0">
@@ -136,9 +140,9 @@ Now if I do a source code I get:
 <script type="text/javascript" src="http://example.net/skin/frontend/company/theme/newsletter_popup/newsletter_popup.js"></script>
 {% endhighlight %}
 
-This xml loads first with <span class="code">addItemFirst</span> (which is the same as addItem) the file js/jquery.js which is in skin_js. If it is already added in another xml, it will not load it again, but it is necessary to be stated here. Then with <span class="code">addItemAfter</span we add the javascript <span class="code">newsletter_popup/newsletter_popup.js</span> after the <span class="code">skin_js/js/jquery.js</span>. Calling the skin_js before the path is important.
+This xml loads first with <span class="code">addItemFirst</span> the file js/jquery.js which is in skin_js. If it is already added in another xml, it will not load it again, but it is necessary to be stated here. Then with <span class="code">addItemAfter</span> we add the javascript <span class="code">newsletter_popup/newsletter_popup.js</span> after the <span class="code">skin_js/js/jquery.js</span>. Calling the skin_js before the path is important.
 
-If you were to include a root/js file:
+If you were to include a root/js file we would use it like this:
 {% highlight xml linenos %}
 <action method="addItemAfter">
     <after>js/jquery.js</after>
