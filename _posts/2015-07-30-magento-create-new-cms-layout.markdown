@@ -13,7 +13,7 @@ Template Name: New Template
 */
 ?>
 {% endhighlight %}
-Not in magento. We create a custom module and register it. Create path <span class="code">app/etc/modules/Company_DropdownLayout.xml</span> and insert:
+Not in magento. We need to create a custom module and register it. Create path <span class="code">app/etc/modules/Company_DropdownLayout.xml</span> and insert:
 {% highlight xml linenos %}
 <?xml version="1.0"?>
 <config>
@@ -72,7 +72,9 @@ We must set up the layout file. Create path <span class="code">app/design/fronte
     </newlayout> 
 </layout>
 {% endhighlight %}
-And you're almost done, except for the fact that you don't have your template file. You can now select the New custom layout in the dropdown but the page will return an error on the frontend: Not valid template file:frontend/base/default/template/page/newlayout.phtml
+And you're almost done, except for the fact that you don't have your template file. You can now select the New custom layout in the dropdown:
+<img class="post-image" src="{{ "assets/images/post-images/new-layout.jpg" | prepend: site.baseurl }}" alt="magento new layout cms" />
+But the page will return an error on the frontend: Not valid template file:frontend/base/default/template/page/newlayout.phtml
 
 So we must create the template page. Create path <span class="code">app/frontend/base/default/template/page/newlayout.phtml</span> and insert:
 {% highlight php linenos %}
@@ -94,4 +96,4 @@ So we must create the template page. Create path <span class="code">app/frontend
 	    <h1>This is the new page layout</h1>
 	    ...
 {% endhighlight %}
-Of course you can change the name of your layout to whatever you want inside the label node. 
+Make your edits here for the new template. Of course you can change the name of your layout to whatever you want inside the label node.
