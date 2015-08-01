@@ -73,7 +73,7 @@ We must set up the layout file. Create path <span class="code">app/design/fronte
 </layout>
 {% endhighlight %}
 And you're almost done, except for the fact that you don't have your template file. You can now select the New custom layout in the dropdown:
-<img class="post-image" src="{{ "assets/images/post-images/new-layout.jpg" | prepend: site.baseurl }}" alt="magento new layout cms" />
+<img class="post-image" src="{{ "/assets/images/post-images/new-layout.jpg" | prepend: site.baseurl }}" alt="magento new layout cms" />
 But the page will return an error on the frontend: Not valid template file:frontend/base/default/template/page/newlayout.phtml
 
 So we must create the template page. Create path <span class="code">app/frontend/base/default/template/page/newlayout.phtml</span> and insert:
