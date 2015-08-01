@@ -97,3 +97,5 @@ So we must create the template page. Create path <span class="code">app/frontend
 	    ...
 {% endhighlight %}
 Make your edits here for the new template. Of course you can change the name of your layout to whatever you want inside the label node.
+
+This article is from an answer I gave on <a href="http://stackoverflow.com/questions/31765194/add-layout-identifier-in-magento-admin-panel/31766410#31766410" target="_blank" title="StackOverflow"><i class="fa fa-stack"></i></a>
