@@ -26,7 +26,7 @@ $social-items: facebook twitter google pinterest instagram youtube reddit linked
 	}
 }
 {% endhighlight %}
-Like this, if you want to add more items latter you just have to add an item to the array and an image. In our example, the image name should be socials-facebook.svg and the class is .facebook.
+Like this, if you want to add more items latter you just have to add an item to the array and an image. In our example, the image name should be socials-facebook.svg and the class in our html is .facebook.
 
 If you've used SASS then you've used the @extend and @include directives. There are many times when you would want to extend a class and reuse it as much as possible. But if there is some general style that you always want to extend but there is no html element where this general style alone is applied, then you would want to use a placeholder. 
 
@@ -48,6 +48,6 @@ Say you have three types of buttons. The general style will go into a placeholde
 	//subscribe style;
 }
 {% endhighlight %}
-There is no need for a button class in this case.
+There is no need for a button class in this case, so why make one?
 
-One more tip, use @include only when you have to do it and @extend is not possible (i.e. you want to include variables). This is because @include duplicates your code while @extend concatenates selectors.
+One more tip, use @include only when you have to do it and @extend is not possible (i.e. you want to include variables). This is because @include duplicates your code while @extend concatenates selectors. Because @extend concatenates selectors, you cannot use them in @media queries. 
