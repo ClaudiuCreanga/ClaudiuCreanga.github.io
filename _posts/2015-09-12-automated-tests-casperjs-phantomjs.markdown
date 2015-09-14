@@ -15,7 +15,7 @@ In order to be effective and useful, an automated test should:
 
 Writing automated tests takes time, time in which you could have done the test manually. So when you write the test keep in mind that you want to reuse it. Tests being very different, you want to make your test as <span class="code">modular</span> as possible. This is very simple with javascript and can simply be done by keeping every test inside a function.
 
-First thing to do is to set a url variable to get it from the command line. Then we set up some viewport sizes based on our media queries and then take screenshots:
+First thing to do is to set a url variable to get it from the command line. Then we set up some viewport sizes based on our media queries and then take screenshots, which we will be saving in the screenshots folder:
 
 {% highlight javascript linenos %}
 var BASE_URL = "http://"+casper.cli.get('url');
@@ -169,7 +169,6 @@ function order_user_logged(){
 	
 	// Make a test order
 	casper.then(function() {
-		casper.capture('screenshots/amazon-search-2.png');
 		casper.waitForSelector('#onestepcheckout-form', function() {
 			this.fillSelectors('#onestepcheckout-form', {
 		        'input[id="billing:firstname"]': 'stamba',
@@ -200,7 +199,6 @@ function order_user_logged(){
 function order_user_guest(){
 		// Make a test order
 	casper.then(function() {
-		casper.capture('screenshots/amazon-search-2.png');
 		casper.waitForSelector('#onestepcheckout-form', function() {
 			this.fillSelectors('#onestepcheckout-form', {
 		        'input[id="billing:firstname"]': 'stamba',
@@ -263,6 +261,7 @@ casper.run(function() {
     this.test.done();
 });
 {% endhighlight %}
+
 As you can see, keeping the test modular enables us to exclude steps by just commenting out the functions called. If we just want to test the login and not the register, comment out the register(). Ideally you would have 10-20 functions for every situation possible and some test classes across all your websites for some dom elements like checkout buttons and add to cart.
 
-In the end, to run this file just type in the command line: <span class="code">casperjs test test.js --url="domain.com"</span>.
+In the end, to run this file just type in the command line: <span class="code">casperjs test test.js --url="domain.com"</span>. Watch the command line for errors and check your screenshots folder. 
