@@ -8,10 +8,10 @@ description: "Manual testing is boring and takes a long time. This is why most p
 In order to be effective and useful, an automated test should:
 
 <ul class="cool-bullet lists">
-<li>&nbsp;be 100% accurate</li>
-<li>&nbsp;be scalable</li>
-<li>&nbsp;be at least twice as fast as manual testing</li>
-<li>&nbsp;be easy to write and run</li>
+<li>&nbsp; be 100% accurate</li>
+<li>&nbsp; be scalable</li>
+<li>&nbsp; be at least twice as fast as manual testing</li>
+<li>&nbsp; be easy to write and run</li>
 </ul>
 
 Writing automated tests takes time, time in which you could have done the test manually. So when you write the test keep in mind that you want to reuse it. Tests being very different, you want to make your test as <span class="code">modular</span> as possible. This is very simple with javascript and can simply be done by keeping every test inside a function.
