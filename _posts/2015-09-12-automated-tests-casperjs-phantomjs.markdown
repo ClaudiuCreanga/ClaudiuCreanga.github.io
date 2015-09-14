@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Run Magento specific automated tests with PhantomJs and CasperJs"
+title:  "Automated tests with PhantomJs and CasperJs for magento"
 date:   2015-09-12 23:26:17
 categories: magento
 description: "Manual testing is boring and takes a long time. This is why most people skip them. For the lazy testers, casper the friendly ghost may come to the rescue."
 ---
 In order to be effective and useful, an automated test should:
+
 <ul class="cool-bullet lists">
 <li>be 100% accurate</li>
 <li>be scalable</li>
