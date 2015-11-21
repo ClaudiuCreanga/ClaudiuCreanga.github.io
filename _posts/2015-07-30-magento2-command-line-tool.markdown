@@ -5,6 +5,8 @@ date:   2015-11-17 23:26:17
 categories: magento
 description: "Magento2 comes with a powerful command line interface. It is possible to do a lot a lot of tasks like reindex, clean cache, generate code, create database backups just by typing in your terminal"
 ---
+Magento2 comes with a powerful command line interface. It is possible to do a lot a lot of tasks like reindex, clean cache, generate code, create database backups just by typing in your terminal.
+
 You run magento2 commands like this: <span class="code">php bin/magento command [options] [arguments]</span>. In order to be quicker I suggest creating an alias in your bash profile: <span class="code">alias phpm="php bin/magento"</span> (to open up your bash on mac run<span class="code">sudo nano ~/.bash_profile</span>). 
 
 Now every time you want to run a magento command you just type <span class="code">phpm</span>.
@@ -39,7 +41,6 @@ phpm admin:user:create --admin-user claudiu --admin-password mypass123 --admin-e
 
 The full list of commands:
 {% highlight xml linenos %}
-<?xml version="1.0"?>
 dmin
  admin:user:create                         Creates an administrator
  admin:user:unlock                         Unlock Admin Account
