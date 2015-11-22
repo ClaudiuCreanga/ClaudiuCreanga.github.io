@@ -29,3 +29,13 @@ Remember the days when your module didn't work and you had to look for hours thr
 All you have to do is run <span class="code">php bin/magento dev:urn-catalog:generate .idea/misc.xml</span> and then if you reopen your IDE you can validate your xmls. 
 
 In PhpStorm look for an exclamation mark or a green validation mark in the top right corner. Also you can go to <span class="code">PhpStorm > Preferences > Languages & Frameworks > Schemas and DTDs</span> and see all current URN resolutions.
+
+Most common used:
+{% highlight xml linenos %}
+for module declaration: <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+for routers: <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+for layouts: <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+for DI: <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+{% endhighlight %}
+
+
