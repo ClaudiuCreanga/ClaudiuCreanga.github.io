@@ -39,6 +39,8 @@ So for the command to be successful, you may run it like this:
 phpm admin:user:create --admin-user claudiu --admin-password mypass123 --admin-email my@email.com --admin-firstname me --admin-lastname surname
 {% endhighlight %}
 
+Another useful command, but only for phpstorm users: <span class="code">phpm dev:urn-catalog:generate .idea/misc.xml</span>. This command will resolve URNs.
+
 The full list of commands:
 {% highlight xml linenos %}
 dmin
