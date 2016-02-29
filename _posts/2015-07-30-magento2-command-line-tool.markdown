@@ -7,7 +7,7 @@ description: "Magento2 comes with a powerful command line interface. It is possi
 ---
 Magento2 comes with a powerful command line interface. It is possible to do a lot a lot of tasks like reindex, clean cache, generate code, create database backups just by typing in your terminal.
 
-You run magento2 commands like this: <span class="code">php bin/magento command [options] [arguments]</span>. In order to be quicker I suggest creating an alias in your bash profile: <span class="code">alias phpm="php bin/magento"</span> (to open up your bash on mac run<span class="code">sudo nano ~/.bash_profile</span>). 
+You run magento2 commands like this: <span class="code">php bin/magento command [options] [arguments]</span>. In order to be quicker you can export that path. So you can open your terminal <span class="code">sudo nano ~/.bash_profile</span> and add this line <span class="code">export PATH=$PATH:/Users/Username/sites/magento2/bin</span>. Then restart your terminal. If you type magento -help now you should get a list of all commands. If you get an error saying "Permission denied", then you should run <span class="code">chmod a+x /Users/Username/sites/magento2/bin</span>
 
 Now every time you want to run a magento command you just type <span class="code">phpm</span>.
 
