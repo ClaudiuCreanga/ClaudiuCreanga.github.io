@@ -8,6 +8,9 @@ description: "A list of useful functionalities that are often missing on mobile 
 Most ecommerce websites treat the mobile view of their website as a less featured version of the desktop view. It starts mobile-first with the minimum of features and then the features add up when the screen gets bigger.
 
 What should be done instead is having a base design, a minimal subset of features that will be kept on mobile and desktop and on this design we will add mobile related features for mobile view and desktop related features for the desktop view. 
+
+
+<img src="../assets/images/post-images/mobile-site-1.png" alt="" />
 {% highlight php linenos %}
 <div class="hide">
 <?php if ($_product->isSaleable() && count($_attributes)):?>
