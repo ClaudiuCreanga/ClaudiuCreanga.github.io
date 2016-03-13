@@ -40,27 +40,10 @@ Creating new accounts on mobile is hard and time wasting. It is better to provid
 Users tend to look at the bottom of the site when searching for help. Providing call information and email are good options, as is providing customer chat:
 
 <img src="../assets/images/post-images/mobile-site-8.png" alt="" />
+
+If there are ongoing sales and discounts it is better to reiterate these at every possible point in the shopping experience so that customers don't have to look back for them:
+
 <img src="../assets/images/post-images/mobile-site-9.png" alt="" />
 
-<img src="../assets/images/post-images/mobile-site-1.png" alt="" />
-{% highlight php linenos %}
-<div class="hide">
-<?php if ($_product->isSaleable() && count($_attributes)):?>
-    <dl>
-    <?php foreach($_attributes as $_attribute): ?>
-    <div class="option">
-        <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
-        <dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
-            <div class="input-box">
-                <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
-                    <option><?php echo $this->__('Choose an Option...') ?></option>
-                  </select>
-              </div>
-        </dd>
-    </div>
-    <?php endforeach; ?>
-    </dl>
-<?php endif;?>
-</div>
-{% endhighlight %}
+
 
