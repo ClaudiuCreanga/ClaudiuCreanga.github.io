@@ -45,5 +45,5 @@ If there are ongoing sales and discounts it is better to reiterate these at ever
 
 <img src="../assets/images/post-images/mobile-site-9.png" alt="" />
 
-
+Don't forget to track changes made in your mobile design with tools like Google Analytics to see how conversions are affected.
 
