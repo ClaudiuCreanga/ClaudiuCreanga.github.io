@@ -12,12 +12,25 @@ What should be done instead is having a base design, a minimal subset of feature
 Vital site functionality shouldn't be hidden behind a burger menu, but instead it is a good idea to have it as buttons on top or at the bottom of the page. Also, because the page is much smaller, it is helpful to be able to zoom in to view photos of the product:
 <img src="../assets/images/post-images/mobile-site-1.png" alt="mobile sites zoom in" />
 
-<img src="../assets/images/post-images/mobile-site-2.png" alt="" />
+Another useful information for the user, but that I don't see it much on ecommerce website is the exact discount information. It is not enough to say 15% off. It is better to say that on this product you save £6:
+<img src="../assets/images/post-images/mobile-site-2.png" alt="discount information mobile" />
+
+If possible it is useful to provide the shipping information on the product page, like in how much time the product will be shipped and how much it will cost (from the user's location if it is shared or your main shipping country):
 <img src="../assets/images/post-images/mobile-site-3.png" alt="" />
+
+After an action has been done, like product being added to cart, don't redirect to another page, instead let him continue shopping:
 <img src="../assets/images/post-images/mobile-site-4.png" alt="" />
+
+Extra information on the cart page and checkout is always useful. It helps if you can provide as much functionality as possible, like wishlists: 
 <img src="../assets/images/post-images/mobile-site-5.png" alt="" />
+
+Don't assume that the customers know that your payment gateway is secure, it is better to inform them and have a link where you provide more information:
 <img src="../assets/images/post-images/mobile-site-6.png" alt="" />
+
+Creating new accounts on mobile is hard and time wasting. It is better to provide options to use google, facebook and twitter logins:
 <img src="../assets/images/post-images/mobile-site-7.png" alt="" />
+
+Users tend to look at the bottom of the site when looking for help. Providing call information and email are good options, as is providing customer chat:
 <img src="../assets/images/post-images/mobile-site-8.png" alt="" />
 <img src="../assets/images/post-images/mobile-site-9.png" alt="" />
 
