@@ -9,21 +9,21 @@ Magento2 comes with a powerful command line interface. It is possible to do a lo
 
 You run magento2 commands like this: <span class="code">php bin/magento command [options] [arguments]</span>. In order to be quicker you can export that path. So you can open your terminal <span class="code">sudo nano ~/.bash_profile</span> and add this line <span class="code">export PATH=$PATH:/Users/Username/sites/magento2/bin</span>. Then restart your terminal. If you type magento -help now you should get a list of all commands. If you get an error saying "Permission denied", then you should run <span class="code">chmod a+x /Users/Username/sites/magento2/bin/magento</span>
 
-Now every time you want to run a magento command you just type <span class="code">phpm</span>.
+Now every time you want to run a magento command you just type <span class="code">magento</span>.
 
 Here is a list of the most helpful commands (with the explanation in brackets):
 {% highlight xml linenos %}
-phpm cache:clean (flushes all caches)
-phpm indexer:reindex (reindexes)
-phpm setup:static-content:deploy (deploys static view files)
-phpm module:enable (enables specified module, i.e phpm module:enable Company_Stockists)
-phpm setup:upgrade (upgrades the app, db and schema. This needs to run after every module install)
-phpm setup:backup (takes backup of Magento Application code base, media and database)
-phpm admin:user:create (creates an admin user, options required)
-phpm cron:run (run a specific cron, i.e cron:run merchant)
+magento cache:clean (flushes all caches)
+magento indexer:reindex (reindexes)
+magento setup:static-content:deploy (deploys static view files)
+magento module:enable (enables specified module, i.e magento module:enable Company_Stockists)
+magento setup:upgrade (upgrades the app, db and schema. This needs to run after every module install)
+magento setup:backup (takes backup of Magento Application code base, media and database)
+magento admin:user:create (creates an admin user, options required)
+magento cron:run (run a specific cron, i.e cron:run merchant)
 {% endhighlight %}
 
-Some commands have required options, like <span class="code">admin:user:create</span>. To see the options of a command you can run: <span class="code">phpm admin:user:create -h</span> and you'll get:
+Some commands have required options, like <span class="code">admin:user:create</span>. To see the options of a command you can run: <span class="code">magento admin:user:create -h</span> and you'll get:
 
 {% highlight xml linenos %}
 Options:
@@ -36,10 +36,12 @@ Options:
 
 So for the command to be successful, you may run it like this:
 {% highlight xml linenos %}
-phpm admin:user:create --admin-user claudiu --admin-password mypass123 --admin-email my@email.com --admin-firstname me --admin-lastname surname
+magento admin:user:create --admin-user claudiu --admin-password mypass123 --admin-email my@email.com --admin-firstname me --admin-lastname surname
 {% endhighlight %}
 
-Another useful command, but only for phpstorm users: <span class="code">phpm dev:urn-catalog:generate .idea/misc.xml</span>. This command will resolve URNs.
+Note that you cannot have semicolons ; or parentheses () inside your password.
+
+Another useful command, but only for phpstorm users: <span class="code">magento dev:urn-catalog:generate .idea/misc.xml</span>. This command will resolve URNs.
 
 The full list of commands:
 {% highlight xml linenos %}
