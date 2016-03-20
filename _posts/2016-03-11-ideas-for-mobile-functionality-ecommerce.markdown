@@ -2,12 +2,12 @@
 layout: post
 title:  "Ideas for mobile functionality in ecommerce websites"
 date:   2016-03-11 23:26:17
-categories: magento
+categories: frontend
 description: "A list of useful functionalities that are often missing on mobile ecommerce sites but could improve the user experience and conversion rates."
 ---
 Most ecommerce websites treat the mobile view of their website as a less featured version of the desktop view. It starts mobile-first with the minimum of features and then the features add up when the screen gets bigger.
 
-What should be done instead is having a base design, a minimal subset of features that will be kept on mobile and desktop and on this design we will add mobile related features for mobile view and desktop related features for the desktop view. 
+What should be done instead is having a base design, a minimal subset of features that will be kept on mobile and desktop and on this design we will add mobile related features for mobile view and desktop related features for the desktop view.
 
 Vital site functionality shouldn't be hidden behind a burger menu, but instead it is a good idea to have it as buttons on top or at the bottom of the page. Also, because the page is much smaller, it is helpful to be able to zoom in to view photos of the product:
 
@@ -25,7 +25,7 @@ After an action has been done, like product being added to cart, don't redirect 
 
 <img src="../assets/images/post-images/mobile-site-4.png" alt="" />
 
-Extra information on the cart page and checkout is always useful. It helps if the website can provide as much functionality as possible, like wishlists: 
+Extra information on the cart page and checkout is always useful. It helps if the website can provide as much functionality as possible, like wishlists:
 
 <img src="../assets/images/post-images/mobile-site-5.png" alt="" />
 
@@ -46,4 +46,3 @@ If there are ongoing sales and discounts it is better to reiterate these at ever
 <img src="../assets/images/post-images/mobile-site-9.png" alt="" />
 
 Don't forget to track changes made in your mobile design with tools like Google Analytics to see how conversions are affected.
-
