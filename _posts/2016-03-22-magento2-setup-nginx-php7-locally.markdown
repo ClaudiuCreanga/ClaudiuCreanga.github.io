@@ -5,7 +5,6 @@ date:   2016-03-20 14:26:17
 categories: magento
 description: "How to setup your magento2 website locally with nginx and php7 if you're using a Linux distro (like ubuntu or debian)."
 ---
-fsd
 Installing nginx is as simple as
 {% highlight bash linenos %}
 sudo apt-get update
@@ -14,7 +13,7 @@ sudo apt-get install nginx
 
 Now if you go to http://localhost you can see a welcome message from nginx. You can stop, start or restart it by using <span class="code">sudo /etc/init.d/nginx stop.</span>
 
-Next we have to install php7:
+Next we have to install php7 (package maintained by ondrej. It will be a long time until ubuntu will release an oficial package, if ever.):
 {% highlight bash linenos %}
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
@@ -23,11 +22,11 @@ If you have php5 and you want to remove it:
 {% highlight bash linenos %}
 sudo apt-get update && apt-get purge php5-fpm && apt-get --purge autoremove
 {% endhighlight %}
-Then install php7:
+Then install php7 and most common packages:
 {% highlight bash linenos %}
 sudo apt-get install php7.0-fpm php7.0-mysql php7.0-curl php7.0-gd php7.0-json php7.0-mcrypt php7.0-opcache php7.0-xml php7.0-xsl php7.0-mbstring
 {% endhighlight %}
-and restart nginx.
+and restart nginx (<span class="code">sudo /etc/init.d/nginx restart.</span>).
 
 Next step is to install mariadb:
 {% highlight bash linenos %}
@@ -55,7 +54,7 @@ CREATE USER 'computer_user'@'localhost' IDENTIFIED BY 'some_pass';
 GRANT ALL PRIVILEGES ON *.* TO 'computer_user'@'localhost'
     ->     WITH GRANT OPTION;
 {% endhighlight %}
-Then you create your magento2 database: <span class="code">create database magento2 </span>.
+Then you create your magento2 database: <span class="code">create database magento2; </span>.
 
 Next step is to configure the nginx configuration for our magento2 website. In <span class="code">/etc/nginx/sites-available/</span> create a new file called magento2.com, or whatever your site name is. In there copy these settings:
 {% highlight bash linenos %}
@@ -227,7 +226,9 @@ sudo ln -s /etc/nginx/sites-available/magento2.com /etc/nginx/sites-available/ma
 Then restart nginx: <span class="code">sudo /etc/init.d/nginx restart.</span>.
 
 Now it is time to configure our magento2 files. If you're starting from an already existing project just git clone your project, otherwise run a composer create:
+{% highlight bash linenos %}
 composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition <installation directory name>
+{% endhighlight %}
 
 If you don't have composer installed, you can install it easily:
 {% highlight bash linenos %}
@@ -242,9 +243,13 @@ The last step is to go to your /etc/hosts file and add (run sudo nano /etc/hosts
 {% endhighlight %}
 This will point that website to localhost which is served by nginx.
 
-The last step is to go to: magento2.com/setup and follow the installation instructions. If you receive permission errors, then you must give privileges to your server for those directories, for example /var/generation or pub/static:
+The last step is to go to: http://magento2.com/setup and follow the installation instructions.
+
+If you receive permission errors, then you must give privileges to your server for those directories, for example /var/generation or pub/static:
 {% highlight bash linenos %}
 find /var/www/magento2/var/generation -type d -exec chmod g+s {} \;
 {% endhighlight %}
 
-That should be it. Possible issues could be your fastcgi_split_path_info setting in php.ini which can be 1 if you're not using it in production. If you get errors you should check /var/log/nginx/error.log to see exactly what went wrong, or check the magento error reports in the var/log folder.
+That should be it.
+
+Possible issues could be your fastcgi_split_path_info setting in php.ini which can be 1 if you're not using it in production. If you get errors you should check <span class="code">/var/log/nginx/error.log</span> to see exactly what went wrong, or check the magento error reports in the var/log folder.
