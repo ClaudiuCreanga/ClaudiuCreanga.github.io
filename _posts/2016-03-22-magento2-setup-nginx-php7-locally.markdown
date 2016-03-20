@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Magento2 local setup with nginx, mariadb and php7"
-date:   2016-03-22 23:26:17
-categories: magento
-description: "How to setup your magento2 website locally with nginx and php7 if you're using a Linux distro (like ubuntu or debian)."
+title:  "Ideas for mobile functionality in ecommerce websites"
+date:   2016-03-11 23:26:17
+categories: frontend
+description: "A list of useful functionalities that are often missing on mobile ecommerce sites but could improve the user experience and conversion rates."
 ---
 fsd
