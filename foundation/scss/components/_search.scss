@@ -18,11 +18,13 @@
 #search_button{
 	display:none;
 }
+#site_search{
+	position: relative;
+}
 #site_search .icon{
   position: absolute;
-  top: 50%;
   margin-left: 17px;
-  margin-top: 17px;
+  margin-top: 4px;
   z-index: 1;
   color: #4f5b66;
 }
