@@ -21,9 +21,19 @@
 #site_search{
 	position: relative;
 }
+#search_results a{
+	background: white;
+	text-transform: none;
+}
+#search_results{
+	margin-left: 0;
+}
+#search_results li{
+	margin-bottom: 3px;
+}
 #site_search .icon{
   position: absolute;
-  margin-left: 17px;
+  padding-left: 17px;
   margin-top: 4px;
   z-index: 1;
   color: #4f5b66;
