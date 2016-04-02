@@ -31,3 +31,4 @@ Once this is ok you can proceed to set up the crons. Put a file in your root ser
 <span class="code">/Users/magento-2/</span> is the path to my magento root. Change it to yours. 
 <span class="code">/Applications/MAMP/bin/php/php7.0.0/bin/php</span> is php7. Change it to your version if necessary.
 
+To make sure everything runs ok you have to check <span class="code">var/log/setup.cron.log</span> and see <span class="code">Ran jobs by schedule.</span>
