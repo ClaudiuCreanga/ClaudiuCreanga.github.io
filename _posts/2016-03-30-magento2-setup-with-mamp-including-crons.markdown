@@ -1,41 +1,33 @@
 ---
 layout: post
-title:  "New magento2 xml validation"
+title:  "Magento2 setup with MAMP, crons included"
 date:   2015-11-17 23:26:17
 categories: magento
-description: "In magento2 you can validate your xml files against its corresponding schema definition. This will help you avoid mistakes in your xmls."
+description: "If you don't like docker or vagrant, Mamp is probably your best alternative to get an easy working setup of magento2."
 ---
+First you must upgrade to mysql 5.6. Download this archive: http://downloads.mamp.info/MAMP-PRO/releases/Install_MySQL_5.6.25.command.zip. Unzip it an run it. It will update your mysql server to 5.6. 
 In magento2 you can validate your xml files against its corresponding schema definition. 
 
-In magento1 we had
-{% highlight xml linenos %}
-<?xml version="1.0"?>
-<config>
-    ....
-</config>
+Chose a supported php version in mamp, preferably php7. Then open your php.ini file (File -> Edit Template -> your php version) and change this value <span class="code">always_populate_raw_post_data</span> to -1.
+
+In your terminal open your bash profile (<span class="code">sudo nano ~/.bash_profile</span>) and add this:
+{% highlight bash linenos %}
+PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 {% endhighlight %}
-In magento2 this becomes:
-{% highlight xml linenos %}
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    ....
-</config>
-{% endhighlight %}
+Now type <span class="code">source ~/.bash_profile</span> to refresh your bash profile. if you check your php version in the command line: <span class="code">which php</span> followed by <span class="code">php -v</span> you should get the mamp php and the same php version that you have in your mamp. It is necessary to have the same php that runs in the command line and in the webserver. 
 
-The extra information provided there specifies the schema instance used and the URN to the corresponding xsd file. In our case we point out that our xml must follow the rules presented in the file: <span class="code">vendor/magento/framework/Module/etc/module.xsd</span>. The URN is a type of URI that is location-independent (unlike the URL). 
+You can install magento2 now in your preferred method: http://devdocs.magento.com/guides/v2.0/install-gde/bk-install-guide.html.
 
-Remember the days when your module didn't work and you had to look for hours through xmls to find the typo? Those days should be over now because IDEs (like PhpStorm) can validate instantly your xml against the specified xsd. 
+Once this is ok you can proceed to set up the crons. Put a file in your root server folder with <?php phpinfo() ?> and render it in the browser. There you can see 3 lines that you need: USER, Loaded Configuration File, memory_limit. Now we run <span class="code">sudo crontab -u USER -e</span> and insert our crons (change it to your setup):
 
-All you have to do is run <span class="code">php bin/magento dev:urn-catalog:generate .idea/misc.xml</span> and then if you reopen your IDE you can validate your xmls. 
-
-In PhpStorm look for an exclamation mark or a green validation mark in the top right corner. Also you can go to <span class="code">PhpStorm > Preferences > Languages & Frameworks > Schemas and DTDs</span> and see all current URN resolutions.
-
-Most common used:
-{% highlight xml linenos %}
-for module declaration: <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-for routers: <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
-for layouts: <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-for DI: <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+{% highlight bash linenos %}
+*/1 * * * * /Applications/MAMP/bin/php/php7.0.0/bin/php -c /Library/Application\ Support/appsolute/MAMP\ PRO/conf/php.ini /Users/magento-2/bin/magento cron:run >> /Users/magento-2/var/log/setup.cron.log&
+*/1 * * * * /Applications/MAMP/bin/php/php7.0.0/bin/php -c /Library/Application\ Support/appsolute/MAMP\ PRO/conf/php.ini /Users/magento-2/update/cron.php >> /Users/magento-2/var/log/setup.cron.log&
+*/1 * * * * /Applications/MAMP/bin/php/php7.0.0/bin/php -c /Library/Application\ Support/appsolute/MAMP\ PRO/conf/php.ini /Users/magento-2/bin/magento setup:cron:run >> /Users/magento-2/var/log/setup.cron.log&
 {% endhighlight %}
 
+<span class="code">/Library/Application\ Support/appsolute/MAMP\ PRO/conf/php.ini</span> is my Loaded Configuration File.
+<span class="code">/Users/magento-2/</span> is the path to my magento root. Change it to yours. 
+<span class="code">/Applications/MAMP/bin/php/php7.0.0/bin/php</span> is php7. Change it to your version if necessary.
 
