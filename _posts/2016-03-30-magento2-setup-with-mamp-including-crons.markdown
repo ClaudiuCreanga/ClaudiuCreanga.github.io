@@ -33,3 +33,10 @@ Once this is ok you can proceed to set up the crons. Put a file in your root ser
 To make sure everything runs ok you have to check <span class="code">var/log/setup.cron.log</span> and see <span class="code">Ran jobs by schedule.</span>
 
 In your magento .htaccess change the <span class="code">memory_limit</span> to 2G.
+
+Note that if you are upgrading from magento 2.0.0 there is a bug for php7 that will not let you upgrade and it will not detect your crons. You have to apply the patch http://devdocs.magento.com/guides/v2.0/release-notes/tech_bull_201-upgrade.html and run the resolution 1.
+
+If you get this error in your mamp php logs:
+<span class="code">PHP Fatal error: require_once(): Failed opening required '/public_html/magento2/update/vendor/autoload.php'</span> you must run composer install within the update folder.
+
+More information about the crons here: http://devdocs.magento.com/guides/v2.0/config-guide/cli/config-cli-subcommands-cron.html
