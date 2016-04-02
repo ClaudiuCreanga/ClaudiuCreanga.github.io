@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Magento2 setup with MAMP, crons included"
-date:   2015-11-17 23:26:17
+date:   2016-03-30 23:26:17
 categories: magento
 description: "If you don't like docker or vagrant, Mamp is probably your best alternative to get an easy working setup of magento2."
 ---
