@@ -18,7 +18,7 @@ Now type <span class="code">source ~/.bash_profile</span> to refresh your bash p
 
 You can install magento2 now with your preferred method: http://devdocs.magento.com/guides/v2.0/install-gde/bk-install-guide.html.
 
-Once this is ok you can proceed to set up the crons. Put a file in your root server folder with <span class="code"><?php phpinfo() ?></span> and render it in the browser. There you can see 3 lines that you need: USER, Loaded Configuration File, memory_limit. Now we run <span class="code">sudo crontab -u USER -e</span> and insert our crons (change it to your setup):
+Once this is ok you can proceed to set up the crons. Put a file in your root server folder with <span class="code">phpinfo()</span> and render it in the browser. There you can see 3 lines that you need: USER, Loaded Configuration File, memory_limit. Now we run <span class="code">sudo crontab -u USER -e</span> and insert our crons (change it to your setup):
 
 {% highlight bash linenos %}
 */1 * * * * /Applications/MAMP/bin/php/php7.0.0/bin/php -c /Library/Application\ Support/appsolute/MAMP\ PRO/conf/php.ini /Users/magento-2/bin/magento cron:run >> /Users/magento-2/var/log/setup.cron.log&
