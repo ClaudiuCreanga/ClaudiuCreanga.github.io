@@ -5,7 +5,7 @@ date:   2015-11-17 23:26:17
 categories: magento
 description: "If you don't like docker or vagrant, Mamp is probably your best alternative to get an easy working setup of magento2."
 ---
-First you must upgrade to mysql 5.6. Download this archive: http://downloads.mamp.info/MAMP-PRO/releases/Install_MySQL_5.6.25.command.zip. Unzip it an run it. It will update your mysql server to 5.6. 
+First you must upgrade to mysql 5.6. Download the archive from their official blog: http://blog-en.mamp.info/2015/07/how-to-use-mysql-5-6-with-mamp-and-mamp.html. Unzip it an run it. It will update your mysql server to 5.6. 
 In magento2 you can validate your xml files against its corresponding schema definition. 
 
 Chose a supported php version in mamp, preferably php7. Then open your php.ini file (File -> Edit Template -> your php version) and change this value <span class="code">always_populate_raw_post_data</span> to -1.
