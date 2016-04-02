@@ -14,11 +14,11 @@ In your terminal open your bash profile (<span class="code">sudo nano ~/.bash_pr
 PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
 export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 {% endhighlight %}
-Now type <span class="code">source ~/.bash_profile</span> to refresh your bash profile. if you check your php version in the command line: <span class="code">which php</span> followed by <span class="code">php -v</span> you should get the mamp php and the same php version that you have in your mamp. It is necessary to have the same php that runs in the command line and in the webserver. 
+Now type <span class="code">source ~/.bash_profile</span> to refresh your bash profile. If you check your php version in the command line: <span class="code">which php</span> followed by <span class="code">php -v</span> you should get the mamp php and the same php version that you have in your mamp. It is necessary to have the same php that runs in the command line and in the webserver. 
 
-You can install magento2 now in your preferred method: http://devdocs.magento.com/guides/v2.0/install-gde/bk-install-guide.html.
+You can install magento2 now with your preferred method: http://devdocs.magento.com/guides/v2.0/install-gde/bk-install-guide.html.
 
-Once this is ok you can proceed to set up the crons. Put a file in your root server folder with <?php phpinfo() ?> and render it in the browser. There you can see 3 lines that you need: USER, Loaded Configuration File, memory_limit. Now we run <span class="code">sudo crontab -u USER -e</span> and insert our crons (change it to your setup):
+Once this is ok you can proceed to set up the crons. Put a file in your root server folder with <span class="code"><?php phpinfo() ?></span> and render it in the browser. There you can see 3 lines that you need: USER, Loaded Configuration File, memory_limit. Now we run <span class="code">sudo crontab -u USER -e</span> and insert our crons (change it to your setup):
 
 {% highlight bash linenos %}
 */1 * * * * /Applications/MAMP/bin/php/php7.0.0/bin/php -c /Library/Application\ Support/appsolute/MAMP\ PRO/conf/php.ini /Users/magento-2/bin/magento cron:run >> /Users/magento-2/var/log/setup.cron.log&
