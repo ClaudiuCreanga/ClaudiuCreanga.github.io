@@ -30,9 +30,11 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'password' WITH 
 
 Another issue can be that you are using a VM and you are applying the permissions to the shared folder from the VM instead from your local system. 
 
-If it still doesn't work, maybe it is a cached issue, so you can run cd into pub/static and run
+If it still doesn't work, maybe it is a cached issue, so you can:
 {% highlight php linenos %}
+cd pub/static
 find . -depth -name .htaccess -prune -o -delete
+cd ../../
 rm -rf var/cache/ var/generation/ var/page_cache/ var/view_preprocessed/
 php bin/magento setup:static-content:deploy
 {% endhighlight %}
