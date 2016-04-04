@@ -1,13 +1,27 @@
 ---
 layout: post
-title:  "Add event tracking for Google Analytics in magento"
-date:   2015-07-29 23:26:17
-categories: analytics
-description: "There are quite a few modules out there that add event tracking to magento. Unless you want a complex tracking system, tracking events with Google Analytics can be done with a few lines of code. No need for extensions."
+title:  "Fix permission issues in magento2"
+date:   2016-04-01 23:26:17
+categories: magento
+description: "Permission issues in magento2 can be caused by many issues, here is a few ways to solve them."
 ---
-As you may know, GA, by default, records only page loads. Only when the url is changed the <span class="code">ga function</span> sends data to your analytics account, as you can see from the standard tracking code: <span class="code">ga('send', 'pageview')</span> But, obviously, you would want to track more than page changes: add to cart clicks, newsletter signups etc.
+If you get one of these permission errors: <span class="code">exception 'Magento\Framework\Exception\LocalizedException' with message 'Can't create directory /var/www/html/magento2/var/generation</span> it can be because:
+<ul class="cool-bullet lists">
+<li>the user permissions on the var folder are wrong</li>
+<li>the owner of the var folder is wrong</li>
+<li>the user doesn't have access to the database</li>
+</ul>
+If it is one of the first 2 situations you can solve it simply with <span class="code">find /var -type d -exec chmod g+s {} \;</span> from the root folder. Or <span class="code">chown -R user var</span> to change the user. 
 
-One thing that I would want to know is, for example, if customers actually buy products from the category page, or is that add to basket button on category pages useless. To test it you just have to add an <span class="code">onclick event</span> to the add to basket button:
+If you still get the error and maybe you are running a VM, make sure that the user has access to the database. Run a magento command like <span class="code">php bin/magento setup:static-content:deploy</span>. If you get a database error like this one: 
+{% highlight mysql linenos %}
+[PDOException]                                                                          
+  SQLSTATE[HY000] [1045] Access denied for user ...
+{% endhighlight %}
+Then you need to login to mysql and give the right privileges to your user:
+{% highlight mysql linenos %}
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+{% endhighlight %}
 
 {% highlight javascript linenos %}
 onClick="ga('send', 'event', 'category-page', 'add-to-cart', '<?php echo $_product->getName(); ?>', '<?php echo preg_replace('/\..*/', '', $_product->getFinalPrice()); ?>',{'nonInteraction': 1});"
