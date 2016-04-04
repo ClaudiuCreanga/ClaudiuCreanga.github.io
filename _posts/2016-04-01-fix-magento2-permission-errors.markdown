@@ -23,33 +23,6 @@ Then you need to login to mysql and give the right privileges to your user:
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
 {% endhighlight %}
 
-{% highlight javascript linenos %}
-onClick="ga('send', 'event', 'category-page', 'add-to-cart', '<?php echo $_product->getName(); ?>', '<?php echo preg_replace('/\..*/', '', $_product->getFinalPrice()); ?>',{'nonInteraction': 1});"
-{% endhighlight %}
+Another issue can be that you are using a VM and you are applying the permissions to the shared folder from the VM instead from your local system. 
 
-The code explained:
-
-To every node in your page you can attach an onclick event. Here we attach it to the add to cart button, but you can attach it to an image, video or paragraph. On click, we call the <span class="code">function ga</span> which is defined in the analytics script <span class="code">http://www.google-analytics.com/analytics.js</span>. Inside this function you pass some parameters:
-
-<ul class="cool-bullet lists">
-<li>&nbsp; send - sends the data, you shouldn't change this one.</li>
-<li>&nbsp; event - it is the type of hit. In our case it is an event. When loading a new page it is a pageview.</li>
-<li>&nbsp; category-page - it is the category of our event. It is used to differentiate between events. Usually you want to test multiple types of events on multiple pages.</li>
-<li>&nbsp; add-to-cart - it is the action of the event. You should use a meaningful name.</li>
-<li>&nbsp; $_product->getName(); - it is the event's label. Here I use the name of the product. Depending on your theme configuration you should change it, or you can just use a string.</li>
-<li>&nbsp; preg_replace('/\..*/', '', $_product->getFinalPrice()); - this is the value of the event. Here I get the final price, but because it gets returned with 4 decimals in my theme I strip everything that comes after the dot. This should contain a number, if it contains any other character, like dots, it returns an error. This field should be changed based on your theme.</li>
-<li>&nbsp; {'nonInteraction': 1} - setting the interaction to true means that the click event does not influence your bounce rate. Otherwise your event will be treated like an interaction and it will skew your bounce rate stats.</li>
-</ul>
-
-Now you can go into your analytics dashboard and under <span class="code"Real-Time -> Events</span> you should see your data right away. Event statistics are showed in the section<span class="code"Behaviour -> Events</span> (it usually takes over 12h to populate).
-
-A full example of a tracked button event in magento:
-
-{% highlight php linenos %}
-<?php if($_product->isSaleable()): ?>
-    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onClick="ga('send', 'event', 'category-page', 'add-to-cart', '<?php echo $_product->getName(); ?>', '<?php echo preg_replace('/\..*/', '', $_product->getFinalPrice()); ?>',{'nonInteraction': 1});"><span><span><?php echo $this->__('Add to Cart Tracked') ?></span></span></button>
-<?php else: ?>
-    <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
-<?php endif; ?>
-{% endhighlight %}
-
+If it still doesn't work, maybe it is a cached issue, so you can run cd into pub/static and run <span class="code">find . -depth -name .htaccess -prune -o -delete</span> followed by <span class="code">rm -rf var/cache/ var/generation/ var/page_cache/ var/view_preprocessed/</span> and <span class="code">php bin/magento setup:static-content:deploy</span>
