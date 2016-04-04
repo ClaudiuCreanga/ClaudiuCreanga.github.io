@@ -9,3 +9,5 @@ permalink: none
 
 # Build settings
 markdown: kramdown
+gems:
+  - jekyll-sitemap
