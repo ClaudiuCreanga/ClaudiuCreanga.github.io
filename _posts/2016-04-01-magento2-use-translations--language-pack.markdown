@@ -39,6 +39,7 @@ In that folder create 4 files:
 "Related Products","Use with:"
 
 {% endhighlight %}
+Here of course you insert other translations. 
 
 
 <li> language.xml</li>
@@ -53,6 +54,7 @@ In that folder create 4 files:
 </language>
 {% endhighlight %}
 We've used en_us as the parent language.
+
 
 <li> registration.php</li>
 {% highlight php linenos %}
@@ -69,3 +71,7 @@ We've used en_us as the parent language.
 
 </ul>
 Bare in mind that the language code is case sensitive. Path, registration and vendor are <span class="code">uk_gb</span>, but csv and language code is <span class="code">uk_GB</span>.
+
+If you want to use translations in your module, you just create a i18n folder there and add your csv file. 
+
+The numeronym i18n comes from Internationalization, 18 being the number of letters between the first i and the last n. The idea behind internationalization is that an application should potentially be adapted to various languages without the need to touch the code. Magento2 does well here. 
