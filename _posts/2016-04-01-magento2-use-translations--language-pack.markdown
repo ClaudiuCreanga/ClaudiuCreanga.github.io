@@ -11,11 +11,11 @@ Create path <span class="code">/app/i18n/magento/uk_gb/</span>.
 
 In that folder create 4 files:
 <ul class="cool-bullet lists">
-<li>composer.json</li>
+<li> composer.json</li>
 {% highlight php linenos %}
 {
 "name": "magento/uk_gb",
-  "description": "Ukrainian",
+  "description": "English",
   "version": "100.0.1",
   "license": [
     "OSL-3.0",
@@ -33,25 +33,28 @@ In that folder create 4 files:
 }
 {% endhighlight %}
 
-<li>uk_GB.csv</li>
+<li> uk_GB.csv</li>
 {% highlight xml linenos %}
 
-"some newsletter text","changed newsletter text"
+"Related Products","Use with:"
 
 {% endhighlight %}
 
 
-<li>language.xml</li>
+<li> language.xml</li>
 {% highlight xml linenos %}
 <?xml version="1.0"?>
 <language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/Language/package.xsd">
-    <code>uk_GB</code>
-    <vendor>magento</vendor>
-    <package>uk_gb</package>
+    <code>en_GB</code>
+    <vendor>limesharp</vendor>
+    <package>en_gb</package>
+    <sort_order>100</sort_order>
+    <use vendor="oxford-university" package="en_us"/>
 </language>
 {% endhighlight %}
+We've used en_us as the parent language.
 
-<li>registration.php</li>
+<li> registration.php</li>
 {% highlight php linenos %}
 <?php
 
@@ -65,39 +68,4 @@ In that folder create 4 files:
 {% endhighlight %}
 
 </ul>
-Bare in mind that it is case sensitive. Path, registration and vendor are uk_gb, but csv and code is uk_GB.
-
-
-If you get one of these permission errors: 
-{% highlight php linenos %}
-exception 'Magento\Framework\Exception\LocalizedException' with message 'Can't create directory /var/www/html/magento2/var/generation
-{% endhighlight %}
-
-it can be because:
-<ul class="cool-bullet lists">
-<li> the user permissions on the var folder are wrong</li>
-<li> the owner of the var folder is wrong</li>
-<li> the user doesn't have access to the database</li>
-</ul>
-If it is one of the first 2 situations you can solve it simply with <span class="code">find /var -type d -exec chmod g+s {} \;</span> from the root folder. Or <span class="code">chown -R user var</span> to change the user. 
-
-If you still get the error and maybe you are running a VM, make sure that the user has access to the database. Run a magento command like <span class="code">php bin/magento setup:static-content:deploy</span>. If you get a database error like this one: 
-{% highlight mysql linenos %}
-[PDOException]                                                                          
-  SQLSTATE[HY000] [1045] Access denied for user ...
-{% endhighlight %}
-Then you need to login to mysql and give the right privileges to your user:
-{% highlight mysql linenos %}
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
-{% endhighlight %}
-
-Another issue can be that you are using a VM and you are applying the permissions to the shared folder from the VM instead from your local system. 
-
-If it still doesn't work, maybe it is a cached issue, so you can:
-{% highlight php linenos %}
-cd pub/static
-find . -depth -name .htaccess -prune -o -delete
-cd ../../
-rm -rf var/cache/ var/generation/ var/page_cache/ var/view_preprocessed/
-php bin/magento setup:static-content:deploy
-{% endhighlight %}
+Bare in mind that the language code is case sensitive. Path, registration and vendor are <span class="code">uk_gb</span>, but csv and language code is <span class="code">uk_GB</span>.
