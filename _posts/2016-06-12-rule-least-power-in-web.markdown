@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rule of Least Power in web development"
-date:   2016-03-30 23:26:17
+date:   2016-06-12 23:26:17
 categories: frontend
 description: "What should we understand from the rule of least power in day to day web development?"
 ---
