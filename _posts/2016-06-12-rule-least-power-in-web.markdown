@@ -19,6 +19,6 @@ If you can create elements in html, create them in html not in php or javascript
 
 In magento, if you can insert an attribute via xml instead of calling it with php, then you should chose the xml route.
 
-The main idea is that you should use the least powerful tool because with power comes complexity, possible errors, security issues etc. If you use a non-powerful tool, then your errors are less likely to destroy the system.
+The main idea is that you should use the least powerful tool because with power comes complexity, possible errors, security issues etc. If you use a non-powerful tool, then your errors are less likely to destroy the system, your inexperience would be less likely to have a performance impact.
 
 Every web framework makes your life easier by using powerful imperative languages to create complex task that you just declare. Magento makes certain tasks very declarative, like changing themes, or customizing a theme. Often you only have to work in xml files. Angular and React do the same thing. 
