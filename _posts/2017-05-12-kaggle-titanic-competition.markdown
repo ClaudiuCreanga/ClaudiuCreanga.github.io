@@ -6,6 +6,8 @@ categories: data-science
 description: "Kaggle Titanic Competition - Random Forest and Stochastic Gradient Descent"
 ---
 
+<div class="jupyter">
+
 ```python
 # load the data
 import pandas as pd
@@ -239,8 +241,9 @@ bar.plot.bar()
 
 
 
+<img src="../assets/images/post-images/mobile-site-2.png" alt="discount information mobile" />
 
-![png](titanic_files/titanic_6_1.png)
+![png](../assets/ipynb/titanic_files/titanic_6_1.png)
 
 
 
@@ -957,3 +960,4 @@ submission_sgd.to_csv("data/titanic_submission_sgd.csv", index=False)
 ```python
 
 ```
+</div>
