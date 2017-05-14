@@ -37,11 +37,22 @@
 	margin-top: $column-gutter / 2;
 }
 .comments #footer ul{
-	display:none;  
+	display:none;
 }
 .post-image{
 	border: 1px solid #ccc;
     border-radius: 10px;
     display: block;
-    margin: 15px 0; 
+    margin: 15px 0;
+}
+.jupyter {
+	table{  
+		font-size:12px;
+		width: 100%;
+    text-align: center;
+		margin-bottom: 10px;
+		th{
+			text-align: center!important;
+		}
+	}
 }

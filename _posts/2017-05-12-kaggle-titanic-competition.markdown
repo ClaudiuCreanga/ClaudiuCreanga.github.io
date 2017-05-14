@@ -8,31 +8,23 @@ description: "Kaggle Titanic Competition - Random Forest and Stochastic Gradient
 
 <div class='jupyter'>
 
-```python
+{% highlight python linenos %}
+
 # load the data
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-%matplotlib inline
-%autosave 0
-
 X = pd.read_csv("data/train.csv")
 X_test = pd.read_csv("data/test.csv")
-```
 
-    Autosave disabled
+{% endhighlight %}
+<br />
 
-
-unknown type  
-
-
-```python
+{% highlight python linenos %}
 X.describe()
-```
-
-
-
+{% endhighlight %}
+<br />
 
 <div>
 <style>
@@ -145,18 +137,17 @@ X.describe()
   </tbody>
 </table>
 </div>
+<br />
 
-
-
-
-```python
+{% highlight python linenos %}
 # check null values
 
 null_columns=X.columns[X.isnull().any()]
 X.isnull().sum()
-```
+{% endhighlight %}
+<br />
 
-
+{% highlight python linenos %}
 
 
     PassengerId      0
@@ -173,12 +164,10 @@ X.isnull().sum()
     Embarked         2
     dtype: int64
 
+{% endhighlight %}
+<br />
 
-
-unknown type  
-
-
-```python
+{% highlight python linenos %}
 # title from name looks interesting because you can get if the person is married or not and guess their age if it is not known
 
 import re
@@ -196,11 +185,11 @@ X["Title"] = X["Name"].apply(get_title)
 X_test["Title"] = X_test["Name"].apply(get_title)
 
 X["Title"].value_counts()
-```
+{% endhighlight %}
+<br />
 
 
-
-
+{% highlight python linenos %}
     Mr          517
     Miss        182
     Mrs         125
@@ -219,11 +208,13 @@ X["Title"].value_counts()
     Countess      1
     Jonkheer      1
     Name: Title, dtype: int64
+{% endhighlight %}
+<br />
 
 
 
 
-```python
+{% highlight python linenos %}
 # We can see here that most people with Mr in their title died while Miss and Mrs survived
 
 title_survive = X[["Title", "Survived"]]
@@ -232,20 +223,12 @@ title_survive_transformed = pd.get_dummies(title_survive, columns=["Title"])
 bar = title_survive_transformed.groupby("Survived").apply(lambda column: column.sum()).transpose().drop(["Survived"])
 bar.columns = ["Died","Survived"]
 bar.plot.bar()
-```
+{% endhighlight %}
+<br />
 
+<img src="../assets/ipynb/titanic_files/titanic_6_1.png" />
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1144fbb00>
-
-
-
-![png](../assets/ipynb/titanic_files/titanic_6_1.png)
-
-
-
-```python
+{% highlight python linenos %}
 # you can see that you had a greater chance to survive if you were in embarked C or Q
 
 embarked_survive = X[["Survived", "Embarked"]]
@@ -254,21 +237,12 @@ embarked_survive_transformed = pd.get_dummies(embarked_survive, columns=["Embark
 e_bar = embarked_survive_transformed.groupby("Survived").apply(lambda column: column.sum()).transpose().drop(["Survived"])
 e_bar.columns = ["Died","Survived"]
 e_bar.plot.bar()
-```
+{% endhighlight %}
+<br />
 
+<img src="../assets/ipynb/titanic_files/titanic_7_1.png" />
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11c8bd1d0>
-
-
-
-
-![png](titanic_files/titanic_7_1.png)
-
-
-
-```python
+{% highlight python linenos %}
 X["FamilySize"] = 1 + X["SibSp"] + X["Parch"]
 X_test["FamilySize"] = 1 + X_test["SibSp"] + X_test["Parch"]
 family_size = X["FamilySize"].apply(lambda row: "Single" if row == 1 else ("Large" if row < 5 else "Extreme"))     
@@ -284,29 +258,19 @@ X_test["FamilySize"] = family_size_test
 f_bar = family_size_transformed.groupby("Survived").apply(lambda column: column.sum()).transpose().drop(["Survived"])
 f_bar.columns = ["Died","Survived"]
 f_bar.plot.bar()
-```
+{% endhighlight %}
+<br />
 
+<img src="../assets/ipynb/titanic_files/titanic_8_1.png" />
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11cf8e128>
-
-
-
-
-![png](titanic_files/titanic_8_1.png)
-
-
-unknown type  
-
-
-```python
+{% highlight python linenos %}
 # fill NaN values with mean so that we can do transformations
 
 X.fillna(X.mean(), inplace=True)
 X_test.fillna(X_test.mean(), inplace=True)
 X.head()
-```
+{% endhighlight %}
+<br />
 
 
 
@@ -438,7 +402,7 @@ X.head()
 
 
 
-```python
+{% highlight python linenos %}
 # Age and Fares are on different scales, so let's scale them
 
 from sklearn import preprocessing
@@ -448,7 +412,8 @@ X[["Age", "Fare"]] = std_scale
 std_scale_test = preprocessing.StandardScaler().fit_transform(X_test[['Age', 'Fare']])
 X_test[["Age", "Fare"]] = std_scale_test
 std_scale
-```
+{% endhighlight %}
+<br />
 
 
 
@@ -456,7 +421,7 @@ std_scale
     array([[ -5.92480600e-01,  -5.02445171e-01],
            [  6.38789012e-01,   7.86845294e-01],
            [ -2.84663197e-01,  -4.88854258e-01],
-           ..., 
+           ...,
            [ -2.23290646e-16,  -1.76263239e-01],
            [ -2.84663197e-01,  -4.43810379e-02],
            [  1.77062908e-01,  -4.92377828e-01]])
@@ -466,17 +431,19 @@ std_scale
 unknown type  
 
 
-```python
+{% highlight python linenos %}
 # transform form categorical to numerical
 
 X_transformed = pd.get_dummies(X, columns = ["Sex", "FamilySize", "Cabin", "Title", "Embarked"])
 X_test_transformed = pd.get_dummies(X_test, columns = ["Sex", "FamilySize", "Cabin", "Title", "Embarked"])
-```
+{% endhighlight %}
+<br />
 
 
-```python
+{% highlight python linenos %}
 X_transformed.head()
-```
+{% endhighlight %}
+<br />
 
 
 
@@ -651,15 +618,17 @@ X_transformed.head()
 
 
 
-```python
+{% highlight python linenos %}
 # correlations
 
 corr_matrix = X_transformed.corr()
 corr_matrix["Survived"].sort_values(ascending=False)
-```
+{% endhighlight %}
+<br />
 
 
 
+{% highlight python linenos %}
 
     Survived                 1.000000
     Sex_female               0.543351
@@ -724,19 +693,20 @@ corr_matrix["Survived"].sort_values(ascending=False)
     Title_Mr                -0.549199
     Name: Survived, Length: 179, dtype: float64
 
+{% endhighlight %}
+<br />
 
-
-
-```python
+{% highlight python linenos %}
 # remove columns that offer little help and the labels
 
 y = X_transformed["Survived"]
 X_fewer_columns = X_transformed.drop(["Survived", "Name", "Ticket", "PassengerId"], axis=1).copy()
 X_test_fewer_columns = X_test_transformed.drop(["Name", "Ticket", "PassengerId"], axis=1).copy()
-```
+{% endhighlight %}
+<br />
 
 
-```python
+{% highlight python linenos %}
 # Stochastic Gradient Descent Classifier
 
 from sklearn.linear_model import SGDClassifier
@@ -745,21 +715,10 @@ sgd_clf = SGDClassifier(random_state=42)
 X_matrix = X_fewer_columns.as_matrix()
 y_matrix = y.as_matrix()
 sgd_clf.fit(X_matrix, y_matrix)
-```
+{% endhighlight %}
+<br />
 
-
-
-
-    SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
-           eta0=0.0, fit_intercept=True, l1_ratio=0.15,
-           learning_rate='optimal', loss='hinge', n_iter=5, n_jobs=1,
-           penalty='l2', power_t=0.5, random_state=42, shuffle=True, verbose=0,
-           warm_start=False)
-
-
-
-
-```python
+{% highlight python linenos %}
 # display all scores in one go
 
 from sklearn.model_selection import cross_val_predict
@@ -774,7 +733,7 @@ def plot_roc_curve(fpr, tpr, **options):
     plt.axis([0, 1, 0, 1])
     plt.xlabel('False Positive Rate', fontsize=16)
     plt.ylabel('True Positive Rate', fontsize=16)
-    
+
 def display_all_scores(model, X):
     y_train_predictions = cross_val_predict(model, X, y_matrix, cv = 3)
     print("Scores for model:",model.__class__.__name__)
@@ -787,12 +746,16 @@ def display_all_scores(model, X):
     plt.figure(figsize=(8, 6))
     plot_roc_curve(fpr, tpr)
     plt.show()
-```
+{% endhighlight %}
+<br />
 
 
-```python
+{% highlight python linenos %}
 display_all_scores(sgd_clf, X_matrix)
-```
+{% endhighlight %}
+<br />
+
+{% highlight python linenos %}
 
     Scores for model: SGDClassifier
     Confusion metrics: [[354 195]
@@ -801,19 +764,18 @@ display_all_scores(sgd_clf, X_matrix)
     Recall score: 0.713450292398
     F1 score: 0.624839948784
 
+{% endhighlight %}
+<br />
 
+<img src="../assets/ipynb/titanic_files/titanic_19_1.png" />
 
-![png](titanic_files/titanic_19_1.png)
-
-
-
-```python
+{% highlight python linenos %}
 # let's see how we do if we remove more columns that do not look interesting
 
-remove_some_cabins = [c for c in X_fewer_columns.columns 
-                      if c[:6] != "Cabin_" 
-                      and c != "Parch" 
-                      and c != "SibSp" 
+remove_some_cabins = [c for c in X_fewer_columns.columns
+                      if c[:6] != "Cabin_"
+                      and c != "Parch"
+                      and c != "SibSp"
                       and c != "Title_Major"
                       and c != "Title_Rev"
                       and c != "Title_Sir"
@@ -825,60 +787,42 @@ remove_some_cabins = [c for c in X_fewer_columns.columns
                       and c != "Title_Capt"
                       ]    
 X_even_fewer_columns = X_fewer_columns[remove_some_cabins]
-X_even_fewer_columns.columns
-```
+{% endhighlight %}
+<br />
 
 
-
-
-    Index(['Pclass', 'Age', 'Fare', 'Sex_female', 'Sex_male', 'FamilySize_Extreme',
-           'FamilySize_Large', 'FamilySize_Single', 'Title_Lady', 'Title_Master',
-           'Title_Miss', 'Title_Mlle', 'Title_Mme', 'Title_Mr', 'Title_Mrs',
-           'Title_Ms', 'Embarked_C', 'Embarked_Q', 'Embarked_S'],
-          dtype='object')
-
-
-
-
-```python
+{% highlight python linenos %}
 sgd_clf1 = SGDClassifier(random_state=42)
 X_matrix = X_even_fewer_columns.as_matrix()
 y_matrix = y.as_matrix()
 sgd_clf1.fit(X_matrix, y_matrix)
-```
+{% endhighlight %}
+<br />
 
-
-
-
-    SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
-           eta0=0.0, fit_intercept=True, l1_ratio=0.15,
-           learning_rate='optimal', loss='hinge', n_iter=5, n_jobs=1,
-           penalty='l2', power_t=0.5, random_state=42, shuffle=True, verbose=0,
-           warm_start=False)
-
-
-
-
-```python
-# As you can see this score is worse then the previous one 
+{% highlight python linenos %}
+# As you can see this score is worse then the previous one
 
 display_all_scores(sgd_clf1, X_matrix)
-```
+{% endhighlight %}
+<br />
 
+
+{% highlight python linenos %}
     Scores for model: SGDClassifier
     Confusion metrics: [[504  45]
      [130 212]]
     Precision score: 0.824902723735
     Recall score: 0.619883040936
     F1 score: 0.707846410684
+{% endhighlight %}
+<br />
+
+
+<img src="../assets/ipynb/titanic_files/titanic_22_1.png" />
 
 
 
-![png](titanic_files/titanic_22_1.png)
-
-
-
-```python
+{% highlight python linenos %}
 # Let's check the Random Forest and you can see that it fares better
 
 from sklearn.ensemble import RandomForestClassifier
@@ -887,18 +831,19 @@ from sklearn.model_selection import cross_val_score
 
 X_matrix = X_fewer_columns.as_matrix()
 rf = RandomForestClassifier(n_jobs=2)
-rf.fit(X_matrix, y_matrix) 
+rf.fit(X_matrix, y_matrix)
 
 y_train_predictions = cross_val_predict(rf, X_matrix,y_matrix,cv=3)
 scores = cross_val_score(rf, X_matrix, y_matrix, scoring='f1', cv=3)
 print("F1 score for Random Forest", scores.mean())
-```
+{% endhighlight %}
+<br />
 
     F1 score for Random Forest 0.727883412153
 
 
 
-```python
+{% highlight python linenos %}
 # ROC Curve for SGD vs RFC, showing that they perform about the same
 
 y_probas_forest = cross_val_predict(rf, X_matrix, y_matrix, cv=3, method="predict_proba")
@@ -913,25 +858,26 @@ plt.plot(fpr, tpr, "b:", linewidth=2, label="SGD")
 plot_roc_curve(fpr_forest, tpr_forest, label="Random Forest")
 plt.legend(loc="lower right", fontsize=16)
 plt.show()
-```
+{% endhighlight %}
+<br />
 
 
-![png](titanic_files/titanic_24_0.png)
+<img src="../assets/ipynb/titanic_files/titanic_24_0.png" />
 
 
 
-```python
+{% highlight python linenos %}
 # Let's see how it performs on the test sample
 
 # make the columns equal in number
 for column in X_fewer_columns.columns:
     if column not in X_test_fewer_columns.columns:
         X_test_fewer_columns[column] = 0
-        
+
 for column in X_test_fewer_columns.columns:
     if column not in X_fewer_columns.columns:
         X_test_fewer_columns.drop([column], axis=1, inplace=True)
-        
+
 
 X_test_matrix = X_test_fewer_columns.as_matrix()
 test_predictions = rf.predict(X_test_matrix)
@@ -952,10 +898,7 @@ submission_sgd = pd.DataFrame(
 
 submission.to_csv("data/titanic_submission.csv", index=False) # both score about 0.72
 submission_sgd.to_csv("data/titanic_submission_sgd.csv", index=False)
-```
+{% endhighlight %}
+<br />
 
-
-```python
-
-```
 </div>
