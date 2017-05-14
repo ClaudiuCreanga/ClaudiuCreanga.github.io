@@ -6,7 +6,7 @@ categories: data-science
 description: "Kaggle Titanic Competition - Random Forest and Stochastic Gradient Descent"
 ---
 
-<div class="jupyter">
+<div class='jupyter'>
 
 ```python
 # load the data
@@ -240,8 +240,6 @@ bar.plot.bar()
     <matplotlib.axes._subplots.AxesSubplot at 0x1144fbb00>
 
 
-
-<img src="../assets/images/post-images/mobile-site-2.png" alt="discount information mobile" />
 
 ![png](../assets/ipynb/titanic_files/titanic_6_1.png)
 
