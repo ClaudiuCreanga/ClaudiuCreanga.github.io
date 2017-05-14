@@ -46,7 +46,10 @@
     margin: 15px 0;
 }
 .jupyter {
-	table.dataframe{  
+	figure.highlight{
+		margin:10px 0; 
+	}
+	table.dataframe{
 		font-size:12px;
 		width: 100%;
     text-align: center;
