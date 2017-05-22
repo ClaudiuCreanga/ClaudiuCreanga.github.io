@@ -34,7 +34,6 @@ X_train.describe()
 {% endhighlight %}
 <br />
 
-{% highlight python linenos %}
 <div>
 <style>
     .dataframe thead tr:only-child th {
@@ -273,7 +272,6 @@ X_train.describe()
 </table>
 <p>8 rows × 276 columns</p>
 </div>
-{% endhighlight %}
 
 {% highlight python linenos %}
 # correlation with target feature
