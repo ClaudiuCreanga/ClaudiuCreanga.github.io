@@ -282,6 +282,7 @@ corr_matrix["price_doc"].sort_values(ascending=False)
 <br />
 
 
+{% highlight python linenos %}
 
     price_doc                     1.000000
     num_room                      0.476337
@@ -345,6 +346,7 @@ corr_matrix["price_doc"].sort_values(ascending=False)
     sadovoe_km                   -0.283622
     zd_vokzaly_avto_km           -0.284069
     Name: price_doc, Length: 276, dtype: float64
+{% endhighlight %}
 
 
 
