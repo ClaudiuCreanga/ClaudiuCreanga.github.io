@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Kaggle Titanic Competition"
+title:  "Kaggle Sberbank Hoursing Market Competition"
 date:   2017-05-12 23:26:17
 categories: data-science
-description: "Kaggle Sberbank Housing Market Competition - Random Forest, Extreme Gradient Boosting"
+description: "Kaggle Sberbank Housing Market Competition - Random Forest, Extreme Gradient Boosting, Linear Regression"
 ---
 
 <div class='jupyter'>
@@ -17,7 +17,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 color = sns.color_palette()
 
-
 %matplotlib inline
 {% endhighlight %}
 <br />
@@ -29,16 +28,13 @@ X_train = pd.read_csv("data/russian_house_market/train.csv", parse_dates=['times
 X_test = pd.read_csv("data/russian_house_market/test.csv")
 {% endhighlight %}
 <br />
-unknown type  
-
 
 {% highlight python linenos %}
 X_train.describe()
 {% endhighlight %}
 <br />
 
-
-
+{% highlight python linenos %}
 <div>
 <style>
     .dataframe thead tr:only-child th {
@@ -277,9 +273,7 @@ X_train.describe()
 </table>
 <p>8 rows × 276 columns</p>
 </div>
-
-
-
+{% endhighlight %}
 
 {% highlight python linenos %}
 # correlation with target feature
@@ -637,13 +631,6 @@ lr_clf.fit(X_train_transformed, y)
 {% endhighlight %}
 <br />
 
-
-
-    LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)
-
-
-
-
 {% highlight python linenos %}
 # display all scores in one go
 
@@ -663,21 +650,13 @@ display_scores(lr_rmse_scores)
 {% endhighlight %}
 <br />
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-8-dda669cc797c> in <module>()
-          1 from sklearn.model_selection import cross_val_score
-          2 
-    ----> 3 lr_scores = cross_val_score(lr_clf,X_train_transformed, y, scoring="neg_mean_squared_error", cv=10)
-          4 lr_rmse_scores = np.sqrt(-lr_scores)
-          5 display_scores(lr_rmse_scores)
-
-
-    NameError: name 'lr_clf' is not defined
-
-
+{% highlight python linenos %}
+Scores: [  4.24231011e+06   9.91980367e+06   3.43953083e+06   7.66985806e+09
+   7.71852130e+06   3.62683154e+06   3.25531314e+09   3.32414976e+06
+   3.42314427e+06   3.91199943e+06]
+Mean: 1096477749.0
+Standard deviation: 2395858735.05
+{% endhighlight %}
 
 {% highlight python linenos %}
 from sklearn.metrics import mean_squared_error
@@ -689,12 +668,7 @@ lr_smre
 {% endhighlight %}
 <br />
 
-
-
     3468938.7143163057
-
-
-
 
 {% highlight python linenos %}
 # predict for test with linear regression
@@ -754,13 +728,14 @@ rfr_rmse_scores = np.sqrt(-rfr_scores)
 display_scores(rfr_rmse_scores)
 {% endhighlight %}
 <br />
+{% highlight python linenos %}
     Scores: [ 4028866.76898487  2399962.99959557  2670868.71730077  2653273.81372096
       2688965.95341056  3039268.45804425  2772076.02745459  2517358.66164347
       2498985.05770515  3120309.95459634]
     Mean: 2838994.0
     Standard deviation: 451286.366994
 
-
+{% endhighlight %}
 
 {% highlight python linenos %}
 gbr_scores = cross_val_score(gbr,X_train_transformed, y, scoring="neg_mean_squared_error", cv=10)
@@ -768,132 +743,6 @@ gbr_rmse_scores = np.sqrt(-gbr_scores)
 display_scores(gbr_rmse_scores)
 {% endhighlight %}
 <br />
-
-    ---------------------------------------------------------------------------
-
-    KeyboardInterrupt                         Traceback (most recent call last)
-
-    <ipython-input-223-badf0f41e9f7> in <module>()
-    ----> 1 gbr_scores = cross_val_score(gbr,X_train_transformed, y, scoring="neg_mean_squared_error", cv=10)
-          2 gbr_rmse_scores = np.sqrt(-gbr_scores)
-          3 display_scores(gbr_rmse_scores)
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/model_selection/_validation.py in cross_val_score(estimator, X, y, groups, scoring, cv, n_jobs, verbose, fit_params, pre_dispatch)
-        138                                               train, test, verbose, None,
-        139                                               fit_params)
-    --> 140                       for train, test in cv_iter)
-        141     return np.array(scores)[:, 0]
-        142 
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/externals/joblib/parallel.py in __call__(self, iterable)
-        756             # was dispatched. In particular this covers the edge
-        757             # case of Parallel used with an exhausted iterator.
-    --> 758             while self.dispatch_one_batch(iterator):
-        759                 self._iterating = True
-        760             else:
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/externals/joblib/parallel.py in dispatch_one_batch(self, iterator)
-        606                 return False
-        607             else:
-    --> 608                 self._dispatch(tasks)
-        609                 return True
-        610 
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/externals/joblib/parallel.py in _dispatch(self, batch)
-        569         dispatch_timestamp = time.time()
-        570         cb = BatchCompletionCallBack(dispatch_timestamp, len(batch), self)
-    --> 571         job = self._backend.apply_async(batch, callback=cb)
-        572         self._jobs.append(job)
-        573 
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/externals/joblib/_parallel_backends.py in apply_async(self, func, callback)
-        107     def apply_async(self, func, callback=None):
-        108         """Schedule a func to be run"""
-    --> 109         result = ImmediateResult(func)
-        110         if callback:
-        111             callback(result)
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/externals/joblib/_parallel_backends.py in __init__(self, batch)
-        324         # Don't delay the application, to avoid keeping the input
-        325         # arguments in memory
-    --> 326         self.results = batch()
-        327 
-        328     def get(self):
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/externals/joblib/parallel.py in __call__(self)
-        129 
-        130     def __call__(self):
-    --> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
-        132 
-        133     def __len__(self):
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/externals/joblib/parallel.py in <listcomp>(.0)
-        129 
-        130     def __call__(self):
-    --> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
-        132 
-        133     def __len__(self):
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/model_selection/_validation.py in _fit_and_score(estimator, X, y, scorer, train, test, verbose, parameters, fit_params, return_train_score, return_parameters, return_n_test_samples, return_times, error_score)
-        236             estimator.fit(X_train, **fit_params)
-        237         else:
-    --> 238             estimator.fit(X_train, y_train, **fit_params)
-        239 
-        240     except Exception as e:
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/ensemble/gradient_boosting.py in fit(self, X, y, sample_weight, monitor)
-       1026         # fit the boosting stages
-       1027         n_stages = self._fit_stages(X, y, y_pred, sample_weight, random_state,
-    -> 1028                                     begin_at_stage, monitor, X_idx_sorted)
-       1029         # change shape of arrays after fit (early-stopping or additional ests)
-       1030         if n_stages != self.estimators_.shape[0]:
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/ensemble/gradient_boosting.py in _fit_stages(self, X, y, y_pred, sample_weight, random_state, begin_at_stage, monitor, X_idx_sorted)
-       1081             y_pred = self._fit_stage(i, X, y, y_pred, sample_weight,
-       1082                                      sample_mask, random_state, X_idx_sorted,
-    -> 1083                                      X_csc, X_csr)
-       1084 
-       1085             # track deviance (= loss)
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/ensemble/gradient_boosting.py in _fit_stage(self, i, X, y, y_pred, sample_weight, sample_mask, random_state, X_idx_sorted, X_csc, X_csr)
-        785             else:
-        786                 tree.fit(X, residual, sample_weight=sample_weight,
-    --> 787                          check_input=False, X_idx_sorted=X_idx_sorted)
-        788 
-        789             # update tree leaves
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/tree/tree.py in fit(self, X, y, sample_weight, check_input, X_idx_sorted)
-       1027             sample_weight=sample_weight,
-       1028             check_input=check_input,
-    -> 1029             X_idx_sorted=X_idx_sorted)
-       1030         return self
-       1031 
-
-
-    /Users/claudiucreanga/anaconda/lib/python3.5/site-packages/sklearn/tree/tree.py in fit(self, X, y, sample_weight, check_input, X_idx_sorted)
-        348                                            self.min_impurity_split)
-        349 
-    --> 350         builder.build(self.tree_, X, y, sample_weight, X_idx_sorted)
-        351 
-        352         if self.n_outputs_ == 1:
-
-
-    KeyboardInterrupt: 
-
-
 
 {% highlight python linenos %}
 # extreme gradient boosting
