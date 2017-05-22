@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Kaggle Sberbank Hoursing Market Competition"
-date:   2017-05-12 23:26:17
+date:   2017-05-22 23:26:17
 categories: data-science
 description: "Kaggle Sberbank Housing Market Competition - Random Forest, Extreme Gradient Boosting, Linear Regression"
 ---
