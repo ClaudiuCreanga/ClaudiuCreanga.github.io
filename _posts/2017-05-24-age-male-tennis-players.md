@@ -70,7 +70,11 @@ data = agg.mean()
 
 
 {% highlight python linenos %}
-plt.plot(data.index.to_pydatetime(), data.B)
+# since 86 the age of top 100 players has gone up
+
+f, ax = plt.subplots(figsize=(12, 8))
+ax.plot(data.index.to_pydatetime(), data.B)
+ax.set(title='Top 100 players through the years', ylabel='Age')
 {% endhighlight %}
 
 <img style="width:100%" src="../assets/ipynb/tennis/tennis_5_1.png" />
