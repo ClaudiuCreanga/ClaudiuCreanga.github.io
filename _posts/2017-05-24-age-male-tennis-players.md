@@ -73,14 +73,7 @@ data = agg.mean()
 plt.plot(data.index.to_pydatetime(), data.B)
 {% endhighlight %}
 
-
-
-
-    [<matplotlib.lines.Line2D at 0x135c60898>]
-
-
-
 <img src="../assets/ipynb/tennis/tennis_5_1.png" />
 
-![png](tennis_files/tennis_5_1.png)
+Full code: https://github.com/ClaudiuCreanga/tennis-statistics
 
