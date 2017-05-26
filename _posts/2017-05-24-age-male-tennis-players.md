@@ -73,7 +73,7 @@ data = agg.mean()
 plt.plot(data.index.to_pydatetime(), data.B)
 {% endhighlight %}
 
-<img src="../assets/ipynb/tennis/tennis_5_1.png" />
+<img style="width:100%" src="../assets/ipynb/tennis/tennis_5_1.png" />
 
 Full code: https://github.com/ClaudiuCreanga/tennis-statistics
 
