@@ -9,7 +9,7 @@ description: "After a period of dominance, American players are struggling to ge
 
 <div class='jupyter'>
 
-After a period of dominance in the 80s, American players are struggling to get in top 100. Now Spain and France rule the sport. 
+<p>After a period of dominance in the 80s, American players are struggling to get in top 100. Now Spain and France rule the sport. </p>
 
 {% highlight python linenos %}
 import pandas as pd
