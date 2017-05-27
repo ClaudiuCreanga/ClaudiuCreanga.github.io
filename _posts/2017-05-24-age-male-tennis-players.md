@@ -81,3 +81,4 @@ ax.set(title='Top 100 players through the years', ylabel='Age')
 
 Full code: https://github.com/ClaudiuCreanga/tennis-statistics
 
+</div>

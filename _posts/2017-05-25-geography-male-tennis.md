@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "The geography of male tennis"
-date:   2017-05-25 23:26:17
+title:  "Average age of top 100 ATP male tennis players"
+date:   2017-05-23 23:26:17
 categories: data-science
-description: "After a period of dominance, Americans players are struggling to get in top 100"
+description: "Although the sport is getting more physical we can see that the age of top tennis players has gone up"
 ---
+
+
+<div class='jupyter'>
 
 {% highlight python linenos %}
 import pandas as pd
@@ -231,3 +234,4 @@ pivoted.plot(figsize=(20,10))
 {% endhighlight %}
 
 <img style="width:100%" src="../assets/ipynb/tennis/best-100players-country_10_1.png" />
+</div>
