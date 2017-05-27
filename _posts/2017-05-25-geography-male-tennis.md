@@ -3,11 +3,13 @@ layout: post
 title:  "The geography of male tennis"
 date:   2017-05-25 23:26:17
 categories: data-science
-description: "After a period of dominance, Americans players are struggling to get in top 100"
+description: "After a period of dominance, American players are struggling to get in top 100"
 ---
 
 
 <div class='jupyter'>
+
+After a period of dominance in the 80s, American players are struggling to get in top 100. Now Spain and France rule the sport. 
 
 {% highlight python linenos %}
 import pandas as pd
