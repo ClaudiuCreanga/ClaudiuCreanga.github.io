@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Average age of top 100 ATP male tennis players"
-date:   2017-05-23 23:26:17
+title:  "The geography of male tennis"
+date:   2017-05-25 23:26:17
 categories: data-science
-description: "Although the sport is getting more physical we can see that the age of top tennis players has gone up"
+description: "After a period of dominance, Americans players are struggling to get in top 100"
 ---
 
 
