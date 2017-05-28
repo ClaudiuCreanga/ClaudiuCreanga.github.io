@@ -9,7 +9,7 @@ description: "Magento released magento2 almost 2 years ago. Let's see how the op
 
 <div class='jupyter'>
 
-<p>TL;DR; Magento2 is still shadowed by magento1</p>
+<p>TL;DR; Magento2 is still being shadowed by magento1</p>
 
 <p>Magento2 was released almost 2 years ago and the response was mixed (to say the least). Many developers complained about the frontend workflow and the amount of bugs. But, in the end,
 the update was needed and we have a new modern php ecommerce framework.</p>
