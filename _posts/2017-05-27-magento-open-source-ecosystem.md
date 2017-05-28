@@ -74,6 +74,8 @@ ax.set(title='Number of magento2 repos created per month', ylabel='Number of rep
 
 <img style="width:100%" src="../assets/ipynb/magento/magento-github-stats_5_1.png" />
 
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 # let's see for magento1
 # although decreasing hard since begining of 2016, there are still magento1 repos being created
@@ -85,10 +87,13 @@ f, ax = plt.subplots(figsize=(12, 8))
 ax.plot(magento1_data_start_dates)
 ax.set(title='Number of magento1 repos created per month', ylabel='Number of repos')
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/magento/magento-github-stats_6_1.png" />
 
 
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 # plotting the 2 of them together we see that magento2 is struggling to catch up with magento1
 # and has a long way until it reaches magento1 highest period when there were up to 60 repos created per month
@@ -99,9 +104,12 @@ f, ax = plt.subplots(figsize=(12, 8))
 ax.plot(magento_start_date)
 ax.set(title='Number of magento1 and magento2 repos created', ylabel='Number of repos')
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/magento/magento-github-stats_7_1.png" />
 
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 # but let's see how active are the magento1 repos vs magento2 repos
 
@@ -119,9 +127,12 @@ f, ax = plt.subplots(figsize=(12, 8))
 ax.plot(magento_last_commit)
 ax.set(title='Number of magento1 repos with last activity this month', ylabel='Number of repos')
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/magento/magento-github-stats_8_1.png" />
 
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 from github import Github
 import csv
@@ -176,7 +187,7 @@ with open('data/magento-github/object_manager.csv', 'w') as myfile:
 {% endhighlight %}
 
 {% highlight python linenos %}
-# quality
+# code quality
 def percentage(part, whole):
   return int(100 * float(part)/float(whole))
 
@@ -185,6 +196,7 @@ ax = quality.plot(kind="bar", title="Quality of magento2 repos", figsize=(15,10)
 for p in ax.patches:
     ax.annotate(str(int(p.get_height())) +" ("+ str(percentage(p.get_height(), 184)) + "% )", ((p.get_x()), int(p.get_height() + 1)))
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/magento/magento-github-stats_11_1.png" />
 
