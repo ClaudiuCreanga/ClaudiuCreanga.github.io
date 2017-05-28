@@ -1,11 +1,11 @@
 (function($){
   $(document).ready(function(){
-	  
+
 	  /***** BACK TO TOP *****/
-	  
+
 	  // hide #back-top first
 	  $("#back-top").hide();
-	
+
 	  // fade in #back-top
 	  $(function () {
 	    $(window).scroll(function () {
@@ -15,7 +15,7 @@
 	        $('#back-top').fadeOut();
 	      }
 	    });
-	
+
 	    // scroll body to 0px on click
 	    $('#back-top .fi-arrow-up').click(function() {
 	      $('body,html').animate({
@@ -23,7 +23,7 @@
 	      }, "slow");
 	    });
 	  });
-	  
+
 	  /***** TOP BLOCKS *****/
 	  $(".call-block").on("click", function(){
 		  var element = $(this).parent().attr("class");
@@ -35,20 +35,20 @@
 			  $(".blocks").find("."+element).slideUp();
 		  }
 	  })
-	  
+
 	  /***** TOGGLE BUTTON TOP *****/
     $(".left-off-canvas-toggle").click(function(){
       $("html, body").animate({ scrollTop: 0 }, "slow");
     })
-	  
-	/***** TOGGLE CODE *****/
-	$(".show-the-codes{").click(function(){
-		$(this).next(".wrap-the-codes").slideToggle();
-		if($(this).next(".wrap-the-codes").is(":visible") == true) {
-			$(this).find("p").text("Hide the code");
-		} else {
-			$(this).find("p").text("Show the code");
-		}
-	})
+
+  	/***** TOGGLE CODE *****/
+  	$(".show-the-codes").click(function(){
+  		$(this).next(".wrap-the-codes").slideToggle();
+  		if($(this).next(".wrap-the-codes").is(":visible") == true) {
+  			$(this).find("p").text("Hide the code");
+  		} else {
+  			$(this).find("p").text("Show the code");
+  		}
+  	})
   });
 })(jQuery);
