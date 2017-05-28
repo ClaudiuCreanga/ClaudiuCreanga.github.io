@@ -263,4 +263,5 @@ for p in ax.patches:
 
 <img style="width:100%" src="../assets/ipynb/magento/magento-github-stats_11_1.png" />
 <p>Only a quarter of the modules are unit tested and over a quarter are using the object manager directly. </p>
+<p>Full code: https://github.com/ClaudiuCreanga/kaggle/blob/master/magento-github-stats.ipynb</p>
 
