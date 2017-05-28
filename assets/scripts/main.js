@@ -41,5 +41,14 @@
       $("html, body").animate({ scrollTop: 0 }, "slow");
     })
 	  
+	/***** TOGGLE CODE *****/
+	$(".show-the-codes{").click(function(){
+		$(this).next(".wrap-the-codes").slideToggle();
+		if($(this).next(".wrap-the-codes").is(":visible") == true) {
+			$(this).find("p").text("Hide the code");
+		} else {
+			$(this).find("p").text("Show the code");
+		}
+	})
   });
 })(jQuery);

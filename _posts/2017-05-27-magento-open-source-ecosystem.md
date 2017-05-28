@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The current state of the magento open source ecosystem"
-date:   2015-05-27 23:26:17
+date:   2017-05-27 23:26:17
 categories: data-science
 description: "Magento released magento2 almost 2 years ago. Let's see how the open source community embraced the new platform."
 ---
@@ -9,6 +9,8 @@ description: "Magento released magento2 almost 2 years ago. Let's see how the op
 
 <div class='jupyter'>
 
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -68,6 +70,7 @@ f, ax = plt.subplots(figsize=(12, 8))
 ax.plot(magento2_data_start_dates)
 ax.set(title='Number of magento2 repos created per month', ylabel='Number of repos')
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/magento/magento-github-stats_5_1.png" />
 
