@@ -46,11 +46,8 @@
       $_this = $(this)
   		$(this).parent().next(".wrap-the-codes").slideToggle("400", function (){
         if($_this.parent().next(".wrap-the-codes").is(":visible") == true) {
-          console.log("da")
           $_this.text("Hide the code");
         } else {
-          console.log("nu")
-
           $_this.text("Show the code");
         }
       });
