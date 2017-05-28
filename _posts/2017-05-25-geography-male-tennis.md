@@ -11,6 +11,8 @@ description: "After a period of dominance, American players are struggling to ge
 
 <p>After a period of dominance in the 80s, American players are struggling to get in top 100. Now Spain and France rule the sport. </p>
 
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 import pandas as pd
 import glob
@@ -183,10 +185,13 @@ aggregate_least_10 = aggregate[(aggregate["0"] > 9)]
 pivoted = pd.pivot_table(aggregate_least_10, values='0', columns='country_code', index="ranking_date")
 pivoted.plot(figsize=(20,10))
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/tennis/best-100players-country_6_1.png" />
 
-
+<p>Without the outlier USA we get a better image.</p>
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 # Let's see that figure again without the outlier USA
 
@@ -194,9 +199,14 @@ aggregate_no_usa = aggregate[(aggregate["country_code"] != "USA") & (aggregate["
 pivoted = pd.pivot_table(aggregate_no_usa, values='0', columns='country_code', index="ranking_date")
 pivoted.plot(figsize=(20,10))
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/tennis/best-100players-country_7_1.png" />
 
+<p>Le'ts see after 2000 a close-up of France and Spain's dominance:</p>
+
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 # after 2000 Spain and France dominate with an average of 15 players in top 100
 
@@ -204,9 +214,13 @@ aggregate_after_2000 = aggregate[(aggregate["ranking_date"] > "2000-01-01" ) & (
 pivoted = pd.pivot_table(aggregate_after_2000, values='0', columns='country_code', index="ranking_date")
 pivoted.plot(figsize=(20,10))
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/tennis/best-100players-country_8_1.png" />
 
+<p>By continent we see that North America dominated in the 80, while Europe has increased it's dominance since early 90s. Now North America is surpassed by South America and on par with Asia.</p>
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 # let's see how it fairs by continent
 
@@ -234,6 +248,6 @@ aggregate_continents = pd.DataFrame(aggregate_continents.to_records()) # transfo
 pivoted = pd.pivot_table(aggregate_continents, values='0', columns='country_code', index="ranking_date")
 pivoted.plot(figsize=(20,10))
 {% endhighlight %}
-
+</div>
 <img style="width:100%" src="../assets/ipynb/tennis/best-100players-country_10_1.png" />
 </div>

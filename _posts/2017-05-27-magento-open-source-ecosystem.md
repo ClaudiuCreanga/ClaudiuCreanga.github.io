@@ -9,6 +9,8 @@ description: "Magento released magento2 almost 2 years ago. Let's see how the op
 
 <div class='jupyter'>
 
+<p>TL;DR; Magento2 is still shadowed by magento1</p>
+
 <p>Magento2 was released almost 2 years ago and the response was mixed (to say the least). Many developers complained about the frontend workflow and the amount of bugs. But, in the end,
 the update was needed and we have a new modern php ecommerce framework.</p>
 <p>Magento Inc. has done a radical shift towards open source with magento2. But let's see if the open source community embraced the new platform.</p>
@@ -261,4 +263,4 @@ for p in ax.patches:
 
 <img style="width:100%" src="../assets/ipynb/magento/magento-github-stats_11_1.png" />
 <p>Only a quarter of the modules are unit tested and over a quarter are using the object manager directly. </p>
-</div>
+
