@@ -218,7 +218,7 @@ pivoted.plot(figsize=(20,10))
 
 <img style="width:100%" src="../assets/ipynb/tennis/best-100players-country_8_1.png" />
 
-<p>By continent we see that North America dominated in the 80, while Europe has increased it's dominance since early 90s. Now North America is surpassed by South America and on par with Asia.</p>
+<p>By continent we see that North America dominated in the 80, while Europe has increased it's dominance since the early 90s. Now North America is surpassed by South America and on par with Asia.</p>
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
 {% highlight python linenos %}

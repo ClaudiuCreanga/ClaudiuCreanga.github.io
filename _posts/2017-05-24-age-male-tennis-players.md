@@ -8,6 +8,9 @@ description: "Although the sport is getting more physical we can see that the ag
 
 <div class='jupyter'>
 
+<p>Although the sport is getting more physical we can see that the age of top 100 tennis players has gone up since 1985.</p>
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
 {% highlight python linenos %}
 import pandas as pd
 import glob
@@ -76,9 +79,10 @@ f, ax = plt.subplots(figsize=(12, 8))
 ax.plot(data.index.to_pydatetime(), data.B)
 ax.set(title='Top 100 players through the years', ylabel='Age')
 {% endhighlight %}
+</div>
 
 <img style="width:100%" src="../assets/ipynb/tennis/tennis_5_1.png" />
 
-Full code: https://github.com/ClaudiuCreanga/tennis-statistics
+<p>Full code: https://github.com/ClaudiuCreanga/tennis-statistics</p>
 
 </div>
