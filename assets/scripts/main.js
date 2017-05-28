@@ -42,13 +42,18 @@
     })
 
   	/***** TOGGLE CODE *****/
-  	$(".show-the-codes").click(function(){
-  		$(this).next(".wrap-the-codes").slideToggle();
-  		if($(this).next(".wrap-the-codes").is(":visible") == true) {
-  			$(this).find("p").text("Hide the code");
-  		} else {
-  			$(this).find("p").text("Show the code");
-  		}
+  	$(".show-the-codes p").click(function(){
+      $_this = $(this)
+  		$(this).parent().next(".wrap-the-codes").slideToggle("400", function (){
+        if($(this).parent().next(".wrap-the-codes").is(":visible") == true) {
+          console.log("da")
+          $_this.text("Hide the code");
+        } else {
+          console.log("nu")
+
+          $_this).text("Show the code");
+        }
+      });
   	})
   });
 })(jQuery);
