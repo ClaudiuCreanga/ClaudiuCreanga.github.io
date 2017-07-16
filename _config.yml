@@ -2,7 +2,7 @@
 title: Claudiu Creanga
 description: Claudiu Creanga - Software Engineer. Working primarily with python, php and javascript.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://claudiucreanga.me" # the base hostname & protocol for your site
+url: "http://claudiucreanga.github.io" # the base hostname & protocol for your site
 twitter_username: ClaudiuCreanga
 github_username:  ClaudiuCreanga
 permalink: none
