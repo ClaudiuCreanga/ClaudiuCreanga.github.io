@@ -62,7 +62,7 @@ class MySpider(scrapy.Spider):
 <p>From the chart bellow we can see that R and Python were used almost equally at first but then at the beginning of 2016 Python started to
 grow much more rapidly then R. The other 2 languages (Julia and SQLite) were not used often enough to be meaningful in the chart. </p>
 
-<img style="width:100%" src="../assets/ipynb/kaggle/kernels-by-language.jpg" />
+<img style="width:100%" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/kernels-by-language.jpg" />
 
 
 <div class="show-the-codes"><p>Show the code</p></div>
@@ -116,7 +116,7 @@ for index, p in enumerate(ax.patches):
 <p>To see the quality of the kernels we can check how many medals did the kernels receive. We followed the Olympics rule of giving to gold
 medals 3 points, to silver 2 points and to bronze 1 point.</p>
 
-<img style="width:100%" src="../assets/ipynb/kaggle/quality-kernels.jpg" />
+<img style="width:100%" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/quality-kernels.jpg" />
 
 <p>Python kernels got almost twice as many medals than R (2241 compared to 1235), but has a 
 
