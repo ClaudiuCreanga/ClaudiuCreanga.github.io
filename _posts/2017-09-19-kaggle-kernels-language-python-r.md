@@ -9,11 +9,11 @@ description: "Kaggle is the github of data science. Here we see the evolution of
 
 <div class='jupyter'>
 
-<p>TL;DR; Python is king, but R kernels are more likely to win medals</p>
+<p>TL;DR; Python is king, but R kernels are more likely to win medals.</p>
 
-<p>The kernels feature on kaggle.com was introduced around March 2015 and became quickly popular among data scientists. 
-In 2017 in every month almost 10.000 new kernels are created.</p>
-<p>Kaggle does not provide an api, so to get the data about kernles we had to scrape the website, which returned 114.896 kernels<p>
+<p>The kernels feature on <a href="https://kaggle.com" target="_blank">kaggle.com</a> was introduced around March 2015 and became quickly popular among data scientists. 
+In 2017, in every month almost 10.000 new kernels are created. So I was curious what language do devs use on kaggle.</p>
+<p>Kaggle does not provide an api, so to get the data about kernels I had to scrape the website, which returned 114.896 kernels.<p>
 
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
@@ -80,7 +80,7 @@ def dateparse(date) -> str:
     return "%s-%s" % (date[0], date[1])
 
 kernels_data = pd.read_csv(
-    r"C:\Users\scrapoulet\Downloads\kaggle-master\kaggle-master\data\kaggle\all_data.csv",
+    "data\kaggle\all_data.csv",
     parse_dates=["date"],
     date_parser=dateparse
 )
@@ -113,12 +113,10 @@ for index, p in enumerate(ax.patches):
 {% endhighlight %}
 </div>
 
-<p>To see the quality of the kernels we can check how many medals did the kernels receive. We followed the Olympics rule of giving to gold
+<p>Maybe R kernels are of better quality? To see the quality of the kernels we can check how many medals did the kernels receive. We followed the Olympics rule of giving to gold
 medals 3 points, to silver 2 points and to bronze 1 point.</p>
 
 <img style="width:100%" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/quality-kernels.jpg" />
-
-<p>Python kernels got almost twice as many medals than R (2241 compared to 1235), but has a 
 
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
@@ -164,5 +162,6 @@ quality_kernels.plot.pie(figsize=(10,8), y = "Quality", title="Percentage of hig
 {% endhighlight %}
 </div>
 
-<p>R has a longer history in data science and, arguably, R users have more experience in this field while Python is easier to learn and 
+
+<p>Python kernels got almost twice as many medals than R (2241 compared to 1235), but the percentage of quality kernels from total kernels is smaller for python. R has a longer history in data science and, arguably, R users have more experience in this field while Python is easier to learn and 
 likely the language of choice for beginners in data science.</p>
