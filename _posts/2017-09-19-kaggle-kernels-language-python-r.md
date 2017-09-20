@@ -165,3 +165,4 @@ quality_kernels.plot.pie(figsize=(10,8), y = "Quality", title="Percentage of hig
 
 <p>Python kernels got almost twice as many medals than R (2241 compared to 1235), but the percentage of quality kernels from total kernels is smaller for python. R has a longer history in data science and, arguably, R users have more experience in this field while Python is easier to learn and 
 likely the language of choice for beginners in data science.</p>
+<p>Full code <a href="https://github.com/ClaudiuCreanga/kaggle/blob/master/kaggle_final.ipynb" target="_blank">here.</p>
