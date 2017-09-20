@@ -166,5 +166,3 @@ quality_kernels.plot.pie(figsize=(10,8), y = "Quality", title="Percentage of hig
 
 <p>R has a longer history in data science and, arguably, R users have more experience in this field while Python is easier to learn and 
 likely the language of choice for beginners in data science.</p>
-
-</div>
