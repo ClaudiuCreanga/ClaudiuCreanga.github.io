@@ -115,7 +115,7 @@ for index, p in enumerate(ax.patches):
 
 <p>Maybe R kernels are of better quality? To see the quality of the kernels we can check how many medals did the kernels receive. We followed the Olympics rule of giving to gold
 medals 3 points, to silver 2 points and to bronze 1 point.</p>
-<img style="width:100%" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/table_kernels.png" />
+<img style="width:auto" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/table_kernels.png" />
 <img style="width:100%" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/quality-kernels.png" />
 
 <div class="show-the-codes"><p>Show the code</p></div>
