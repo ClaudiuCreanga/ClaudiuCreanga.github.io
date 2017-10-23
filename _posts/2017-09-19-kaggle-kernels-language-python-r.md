@@ -4,8 +4,13 @@ title:  "Which language is most popular in Kaggle kernels"
 date:   2017-09-19 23:26:17
 categories: data-science
 description: "Kaggle is the github of data science. Here we see the evolution of languages used in kernels."
+cloudjs:
+ - //cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js
+ - //cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js
+localjs:
+ - kaggle/datamaps.world.min.js
+ - kaggle/custom.js 
 ---
-
 
 <div class='jupyter'>
 
@@ -166,3 +171,6 @@ quality_kernels.plot.pie(figsize=(10,8), y = "Quality", title="Percentage of hig
 <p>Python kernels got almost twice as many medals than R (2241 compared to 1235), but the percentage of quality kernels from total kernels is smaller for python. R has a longer history in data science and, arguably, R users have more experience in this field while Python is easier to learn and 
 likely the language of choice for beginners in data science.</p>
 <p>Full code <a href="https://github.com/ClaudiuCreanga/kaggle/blob/master/kaggle_final.ipynb" target="_blank">here</a>.</p>
+
+Most of the users are in OECD countries. Not all users make their location public or are honest. But from the top 3000 rated users, 852 say they are in USA. This map shows it better when we normalise according to total population:
+<div id="container" style="position: relative; width: 500px; height: 300px;"></div>

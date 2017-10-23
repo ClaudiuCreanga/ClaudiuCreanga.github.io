@@ -48,6 +48,19 @@
     </div>
 
     {% include footer.html %}
+	
+    {% for js in page.cloudjs %}
+    
+		<script type="text/javascript" src="{{ js }}"></script>
+		
+	{% endfor %}
+	
+	    
+    {% for js in page.localjs %}
+    
+		<script type="text/javascript" src="{{ "/assets/scripts/" | prepend: site.baseurl | append: js }}"></script>
+		
+	{% endfor %}
 
   </body>
 
