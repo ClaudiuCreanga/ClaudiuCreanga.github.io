@@ -227,4 +227,4 @@ with open('data/kaggle/users_created.json', 'w') as f:
 </div>
 <div id="container" style="position: relative; width: 500px; height: 300px;"></div>
 
-<p>Full code <a href="https://github.com/ClaudiuCreanga/kaggle/blob/master/kaggle_final.ipynb" target="_blank">here</a>.</p>
+<p>Full code <a href="https://github.com/ClaudiuCreanga/kaggle/tree/master/kaggle_kernels" target="_blank">here</a>.</p>
