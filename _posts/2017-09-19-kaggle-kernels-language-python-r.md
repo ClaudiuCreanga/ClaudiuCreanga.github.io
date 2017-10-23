@@ -171,7 +171,7 @@ quality_kernels.plot.pie(figsize=(10,8), y = "Quality", title="Percentage of hig
 <p>Python kernels got almost twice as many medals than R (2241 compared to 1235), but the percentage of quality kernels from total kernels is smaller for python. R has a longer history in data science and, arguably, R users have more experience in this field while Python is easier to learn and 
 likely the language of choice for beginners in data science.</p>
 
-Most of the users are in OECD countries. Not all users make their location public or are honest. But from the top 3000 rated users, 852 say they are in USA. This map shows it better when we normalise according to total population:
+<p>Most of the users are in OECD countries. Not all users make their location public or are honest. But from the top 3000 rated users, 852 say they are in USA. This map shows it better when we normalise according to total population:</p>
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
 {% highlight python linenos %}
