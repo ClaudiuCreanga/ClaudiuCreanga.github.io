@@ -120,8 +120,8 @@ for index, p in enumerate(ax.patches):
 
 <p>Maybe R kernels are of better quality? To see the quality of the kernels we can check how many medals did the kernels receive. We followed the Olympics rule of giving to gold
 medals 3 points, to silver 2 points and to bronze 1 point.</p>
-
-<img style="width:100%" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/quality-kernels.jpg" />
+<img style="width:auto" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/table_kernels.png" />
+<img style="width:100%" src="https://raw.githubusercontent.com/ClaudiuCreanga/ClaudiuCreanga.github.io/master/assets/ipynb/kaggle/quality-kernels.png" />
 
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
@@ -174,3 +174,4 @@ likely the language of choice for beginners in data science.</p>
 
 Most of the users are in OECD countries. Not all users make their location public or are honest. But from the top 3000 rated users, 852 say they are in USA. This map shows it better when we normalise according to total population:
 <div id="container" style="position: relative; width: 500px; height: 300px;"></div>
+
