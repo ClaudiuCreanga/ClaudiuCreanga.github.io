@@ -170,8 +170,61 @@ quality_kernels.plot.pie(figsize=(10,8), y = "Quality", title="Percentage of hig
 
 <p>Python kernels got almost twice as many medals than R (2241 compared to 1235), but the percentage of quality kernels from total kernels is smaller for python. R has a longer history in data science and, arguably, R users have more experience in this field while Python is easier to learn and 
 likely the language of choice for beginners in data science.</p>
-<p>Full code <a href="https://github.com/ClaudiuCreanga/kaggle/blob/master/kaggle_final.ipynb" target="_blank">here</a>.</p>
 
 Most of the users are in OECD countries. Not all users make their location public or are honest. But from the top 3000 rated users, 852 say they are in USA. This map shows it better when we normalise according to total population:
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
+{% highlight python linenos %}
+data = pd.read_csv(
+    "data/kaggle/users.csv",
+    parse_dates=["join_date"],
+    date_parser=dateparse
+)
+sort_countries = data.groupby("country").size().to_frame("Total").sort_values("Total", ascending=False)
+
+# get data about countries and population
+import json
+
+with open('data/kaggle/population.json') as data_file:    
+    population = json.load(data_file)
+    
+population_dict = {}
+for x in population:
+    population_dict[x["country"]] = x["population"]
+    
+sort_countries["country"] = sort_countries.index.get_level_values('country') 
+sort_countries["population"] = sort_countries["country"].map(population_dict).astype(int)
+countries_population = sort_countries.assign(
+     per_capita=lambda x: round(x["Total"] / x["population"] * 10000000, 2))
+     
+with open('data/kaggle/users_created.json', 'w') as f:
+    f.write(countries_population.to_json(orient='records'))
+    
+
+def get_3_code_country(country):
+    if (country == "South Korea"): 
+        return "KOR"
+    elif (country == "North Korea"):
+        return "PRK"
+    else:
+        url = 'https://restcountries.eu/rest/v2/name/' + quote(country, safe='')
+        r = requests.get(url)
+        response = r.json()
+        try:
+            return response[0]['alpha3Code']
+        except KeyError:
+            return None
+
+import requests
+from urllib.parse import quote
+
+data_javascript_map = countries_population.copy()
+countries_population['iso_3'] = countries_population.country.apply(get_3_code_country)
+
+with open('data/kaggle/users_created.json', 'w') as f:
+    f.write(countries_population[["country","iso_3","Total","per_capita"]].to_json(orient='records'))
+{% endhighlight %}
+</div>
 <div id="container" style="position: relative; width: 500px; height: 300px;"></div>
 
+<p>Full code <a href="https://github.com/ClaudiuCreanga/kaggle/blob/master/kaggle_final.ipynb" target="_blank">here</a>.</p>
