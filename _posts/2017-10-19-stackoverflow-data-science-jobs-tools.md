@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What skills are required the most on stackoverflow data science jobs?"
+title:  "What skills are required on stackoverflow data science jobs?"
 date:   2017-10-19 23:26:17
 categories: data-science
 description: "Python is the most required skill if you're looking for a data science job on Stackoverflow."
@@ -52,8 +52,6 @@ fclose($fp);
 
 <p>If we are looking at the skills required section, we will see that the first 10 skills are:</p>
 
-<img style="width:100%" src="../assets/ipynb/stackoverflow/skills.png" />
-
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
 {% highlight python linenos %}
@@ -87,10 +85,9 @@ plt.pie([float(v) for v in sorted_occurences_dict.values()], labels=[k for k in 
 {% endhighlight %}
 </div>
 
+<img style="width:100%" src="../assets/ipynb/stackoverflow/skills.png" />
 
 <p>Contrary to my expectation, the degree is mentioned in only a quarter of the job posts:</p>
-
-<img style="width:100%" src="../assets/ipynb/stackoverflow/degree.png" />
 
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
@@ -104,4 +101,6 @@ description_degree.plot(kind="pie", labels=["Degree not required","Degree requir
 {% endhighlight %}
 </div>
 
-<p>Full code <a href="https://github.com/ClaudiuCreanga/kaggle/tree/master/kaggle_kernels" target="_blank">here</a>.</p>
+<img style="width:100%" src="../assets/ipynb/stackoverflow/degree.png" />
+
+<p>Full code <a href="https://github.com/ClaudiuCreanga/kaggle/blob/master/stackoverflow-data-science-tools.ipynb" target="_blank">here</a>.</p>
