@@ -10,9 +10,6 @@ description: "Top influential companies and what languages do they use on github
 
 <p>TL;DR; Google is the most influential company on Github, but judging by the number of employees, Facebook fares better. As expected, javascript is the most used language.</p>
 
-<p>To calculate the most influential companies we calculate the number of repositories multiplied by the number of stars received.<p>
-<p>Google is the most influential company on Github, followed up by Facebook, Microsoft, Apache and Mozilla. Although not in the top, we included Amazon and Apple to see how the other two big tech companies are doing:</p>
-
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
 {% highlight python linenos %}
@@ -73,6 +70,17 @@ with open('../data/github-companies/companies2.csv', 'w') as myfile:
     wr.writerow(['Company', 'Repository', 'Stars', 'Watchers', 'Language'])
     for x in data:
         wr.writerow(x)
+
+
+{% endhighlight %}
+</div>
+
+<p>To calculate the most influential companies we calculate the number of repositories multiplied by the number of stars received.<p>
+<p>Google is the most influential company on Github, followed up by Facebook, Microsoft, Apache and Mozilla. Although not in the top, we included Amazon and Apple to see how the other two big tech companies are doing:</p>
+
+<div class="show-the-codes"><p>Show the code</p></div>
+<div class="wrap-the-codes">
+{% highlight python linenos %}
         
 #calculate most influential
 import pandas as pd
@@ -101,12 +109,11 @@ stars_count.plot(kind="pie", y="Stars", autopct=make_autopct(stars_count["Stars"
 plt.ylabel('')
 plt.savefig('data/github-companies/stars.png')
 
-
 {% endhighlight %}
 </div>
 
-<table>
-<tr><th>Company</td><td>Stars</th></tr>
+<table class="table-fill">
+<tr><th>Company</th><th>Stars</th></tr>
 <tr><td>google</td><td>690623</td></tr>
 <tr><td>facebook</td><td>552130</td></tr>
 <tr><td>microsoft</td><td>296351</td></tr>
@@ -144,7 +151,7 @@ plt.savefig('data/github-companies/stars_per_employee.png')
 
 <img style="width:100%" src="../assets/ipynb/github/stars_per_employee.png" />
 
-<p>The majority of the work these companies do is done on the javascript ecosystem. Java, C++ and Python are also receiving a lot of support:</p>
+<p>The majority of the work these companies do is done on the javascript ecosystem. Java, C++ and Python are also receiving a lot of support. Facebook is investing a lot in Ocaml, Apache in Scala and Microsoft in Typescript.</p>
 
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
