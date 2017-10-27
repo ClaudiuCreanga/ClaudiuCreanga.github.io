@@ -10,6 +10,8 @@ description: "Top influential companies and what languages do they use on github
 
 <p>TL;DR; Google is the most influential company on Github, but judging by the number of employees, Facebook fares better. As expected, javascript is the most used language.</p>
 
+<p>To calculate the most influential companies we calculate the number of repositories multiplied by the number of stars received.<p>
+
 <div class="show-the-codes"><p>Show the code</p></div>
 <div class="wrap-the-codes">
 {% highlight python linenos %}
@@ -75,7 +77,6 @@ with open('../data/github-companies/companies2.csv', 'w') as myfile:
 {% endhighlight %}
 </div>
 
-<p>To calculate the most influential companies we calculate the number of repositories multiplied by the number of stars received.<p>
 <p>Google is the most influential company on Github, followed up by Facebook, Microsoft, Apache and Mozilla. Although not in the top, we included Amazon and Apple to see how the other two big tech companies are doing:</p>
 
 <div class="show-the-codes"><p>Show the code</p></div>
