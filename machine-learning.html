@@ -1,0 +1,21 @@
+---
+layout: default
+title: "List of machine learning posts"
+description: "Posts about Machine Learning"
+---
+
+<div class="home" itemscope="" itemtype="http://schema.org/Blog">
+  <ul class="post-list lists cool-bullet">
+	{% for post in site.categories.machine-learning %}
+      <li>
+        <h2 itemscope="" itemtype="http://schema.org/BlogPosting">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" itemprop="name">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta" itemprop="datePublished" datetime="{{ page.date | date: '%b %-d, %Y' }}">- {{ post.date | date: "%b %-d, %Y" }}</span>
+        <p> {{ post.description }} </p>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
+
