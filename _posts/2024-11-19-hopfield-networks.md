@@ -3,7 +3,7 @@ layout: post
 title:  "The ideas behind Hopfield Networks"
 date:   2024-11-19 23:26:17 
 categories: machine-learning 
-description: ""
+description: "John Hopfield just received a Nobel prize, let's implement his network."
 ---
 John Hopfield just received a Nobel prize, so I thought about implementing his network from the 80s.
 A Hopfield network is a type of Recurrent Network which was actually discovered even before Rumelhard's first RNN. It
