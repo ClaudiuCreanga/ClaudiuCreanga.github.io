@@ -14,5 +14,4 @@ exclude: [vendor]
 future: true
 gems:
   - jekyll-sitemap
-plugins:
   - jekyll-seo-tag
