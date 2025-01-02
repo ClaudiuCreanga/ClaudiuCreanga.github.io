@@ -3,8 +3,16 @@ layout: post
 title:  "The rise of the frustrated LLM programmer"
 date:   2025-01-01 23:26:17 
 categories: machine-learning 
-description: ""
+description: "Progress in AI comes from understanding the models"
 ---
+Hinton's entry into the field of artificial intelligence was motivated by a desire to understand the mechanisms of the human mind, a pursuit for which he found the prevailing knowledge in neuroscience and philosophy inadequate.
+The best shot at understanding the mind is to build one. And this is what the current LLMs do, they build a mind. 
+
+These models are viewed as a black box since their beginning. But this is starting to change with the rising field of mechanistic interpretability. 
+The principle behind mechanistic interpretability is that networks representations can be decomposed into independent understandable features. And we can have access to those features. 
+By reverse engineering the neural networks, we can look at neuron activations, understand the circuits of connection between them and then hopefully understand much more of what is going on. 
+And by understanding them, we can make progress, especially on the safety and alignment front. For example, we could dial up some features like helpfulness and dial down features like racism. 
+
 What are features?
 
 Machine learning models discover meaningful representations of data. These representations are called features. They are directions 
