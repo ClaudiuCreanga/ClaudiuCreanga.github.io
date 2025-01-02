@@ -11,7 +11,7 @@ The best shot at understanding the mind is to build one. And this is what the cu
 These models are viewed as a black box since their beginning. But this is starting to change with the rising field of mechanistic interpretability. 
 The principle behind mechanistic interpretability is that networks representations can be decomposed into independent understandable features. And we can have access to those features. 
 By reverse engineering the neural networks, we can look at neuron activations, understand the circuits of connection between them and then hopefully understand much more of what is going on. 
-And by understanding them, we can make progress, especially on the safety and alignment front. For example, we could dial up some features like helpfulness and dial down features like racism. 
+From understanding you can make progress, you can come up with new ideas, especially on the safety and alignment front. For example, we could dial up some features like helpfulness and dial down features like racism. 
 
 What are features?
 
