@@ -1,6 +1,6 @@
 ---
 layout: post 
-title:  "The rise of the frustrated LLM programmer"
+title:  "Understanding superposition in AI models"
 date:   2025-01-01 23:26:17 
 categories: machine-learning 
 description: "Progress in AI comes from understanding the models"
