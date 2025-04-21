@@ -11,4 +11,4 @@ The non-reasoning LLMs act more like fast databases – great for quick, knowled
 
 The other mode is the <b>architect mode</b>. Think of it like the reasoning LLMs. You wouldn't ask a reasoning LLM what is the capital of France. You are wasting too many ressources and it is slow. You use it when you want to analyze situations, connect concepts, evaluate options, and solve problems. You would ask "How did you decide which tool was best for that project, considering the constraints?"
 
-In an interview you are interested in what is inside the candidates {%<thinking></thinking>%} tags. You want to assess how it generates intermediate tokens that will help them give a final answer.
+In an interview you are interested in what is inside the candidates  &lt;thinking&gt;&lt;/thinking&gt; tags. You want to assess how it generates intermediate tokens that will help them give a final answer.
